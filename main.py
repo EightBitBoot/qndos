@@ -4,20 +4,15 @@
 
 from bs4 import BeautifulSoup
 import requests
-import json
+import datetime
 
 BASE_URL = "https://oidref.com"
 TEST_URL = "https://oidref.com/1.0.3166"
 
-def main():
-    response = requests.get(TEST_URL)
-    # response = requests.get("https://oidref.com/2")
-    parsed_html = BeautifulSoup(response.content, "html.parser")
-    body = parsed_html.body
-
+def scrape_description_list(soup):
     data = {}
 
-    description_list = body.find("dl")
+    description_list = soup.find("dl")
 
     for description_term in description_list.find_all("dt"):
         converted_term = str(description_term.string).lower().replace(" ", "_")
@@ -31,25 +26,32 @@ def main():
         match converted_term:
             case "parent":
                 converted_desc = str(description_desc.a.string).strip()
+                if converted_desc == "None":
+                    # Special case for root nodes
+                    converted_desc = None
             case "node_code":
                 converted_desc = int(description_desc.string)
-            case "node_names":
-                converted_desc = [name for name in description_desc.stripped_strings]
-            case "dot_oid":
+            case "node_names" | "asn1_oid" | "iri_oid":
+                converted_desc = [str(name) for name in description_desc.stripped_strings]
+            case "creation_date" | "modification_date":
+                converted_desc = datetime.datetime.strptime(str(description_desc.string).strip(), "%b. %d, %Y")
+            case _:
                 converted_desc = str(description_desc.string).strip()
-            case "asn1_oid":
-                converted_desc = [oid for oid in description_desc.stripped_strings]
-            case "iri_oid":
-                converted_desc = [iri for iri in description_desc.stripped_strings]
-            case "iri_by_oid_info":
-                converted_desc = [oid_info_iri for oid_info_iri in description_desc.stripped_strings]
-            case "creation_date":
-                #TODO(Adin): Finish this
-                pass
 
         data[converted_term] = converted_desc
 
-    print(json.dumps(data, indent=4))
+    return data
+
+
+def main():
+    response = requests.get(BASE_URL + "/0")
+    # response = requests.get(TEST_URL)
+    soup = BeautifulSoup(response.content, "html.parser")
+
+    data = scrape_description_list(soup)
+
+    print(data)
+    # pprint.pprint(data) 
 
 
 if __name__ == "__main__":
