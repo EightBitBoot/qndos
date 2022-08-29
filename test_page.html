@@ -1,54 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <title>
-        OID 1.0.3166 country-codes reference info
-    </title>
-    <meta content="
+    <meta charset="UTF-8">
+    <title>OID 1.0.3166 country-codes reference info </title>
+    <meta name="description" content="
     OID 1.0.3166 country-codes database reference.
     
-" name="description" />
-    <script src="/cdn-cgi/apps/head/2VsPAxpuBO-CkkZXqaeHnqT5qxU.js">
-    </script>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+">
 
-        ga('create', 'UA-82642346-1', 'auto');
-        ga('send', 'pageview');
+    <script src="/cdn-cgi/apps/head/2VsPAxpuBO-CkkZXqaeHnqT5qxU.js"></script><script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-82642346-1', 'auto');
+      ga('send', 'pageview');
     </script>
+
+    
+    
+
     <style>
+        
+        
         table {
             border: solid brown 1px;
             border-collapse: collapse;
             margin-top: 15px
         }
-
         table td {
             border: solid brown 1px;
             padding: 2px 3px;
         }
-
         table th {
             border: solid brown 1px;
             padding: 5px 5px;
             color: white;
-            background-color: hsla(34, 85%, 45%, 1);
+            background-color: hsla(34,85%,45%,1);
             font-weight: normal;
         }
-
         h1 {
             text-align: left;
             display: block;
             width: 100%;
         }
-
         h3 {
             text-align: left;
             display: block;
@@ -57,41 +53,36 @@
             padding: 5px 0 5px 15px;
             margin: 15px 0 0 0;
         }
-
         p {
             padding: 5px 0 5px 15px;
             margin: 0;
             border-left: solid 2px #58bdff;
         }
-
         dl {
-            width: 100%;
-            overflow: hidden;
-            //background: #ff0;
-            padding: 0;
-            margin-top: 15px;
+          width: 100%;
+          overflow: hidden;
+          //background: #ff0;
+          padding: 0;
+          margin-top: 15px;
         }
-
         dt {
-            //float: left;
-            width: 20%;
-            background: #ff9400;
-            border-left: solid 2px #9b5700;
-            font-weight: bolder;
-            text-align: center;
-            padding: 5px 10px 5px 0;
-            margin-top: 15px;
+          //float: left;
+          width: 20%;
+          background: #ff9400;
+          border-left: solid 2px #9b5700;
+          font-weight: bolder;
+          text-align: center;
+          padding: 5px 10px 5px 0;
+          margin-top: 15px;
         }
-
         dd {
-            //float: left;
-            width: 75%;
-            //background: #dd0;
-            border-left: solid 2px #9b5700;
-            padding: 5px 0 0 20px;
-            margin: 0;
+          //float: left;
+          width: 75%;
+          //background: #dd0;
+          border-left: solid 2px #9b5700;
+          padding: 5px 0 0 20px;
+          margin: 0;
         }
-
         .breadcrumb {
             list-style: none;
             overflow: hidden;
@@ -99,18 +90,15 @@
             margin: 0;
             padding: 0;
         }
-
         .breadcrumb li {
             float: left;
         }
-
         .breadcrumb li a {
             color: white;
             text-decoration: none;
             padding: 5px 0 5px 45px;
-            background: brown;
-            /* fallback color */
-            background: hsla(34, 85%, 35%, 1);
+            background: brown;                   /* fallback color */
+            background: hsla(34,85%,35%,1);
             position: relative;
             display: block;
             float: left;
@@ -121,10 +109,9 @@
             display: block;
             width: 0;
             height: 0;
-            border-top: 50px solid transparent;
-            /* Go big on the size, and let overflow hide */
+            border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
             border-bottom: 50px solid transparent;
-            border-left: 30px solid hsla(34, 85%, 35%, 1);
+            border-left: 30px solid hsla(34,85%,35%,1);
             position: absolute;
             top: 50%;
             margin-top: -50px;
@@ -151,63 +138,20 @@
         .breadcrumb li:first-child a {
             padding-left: 10px;
         }
-
-        .breadcrumb li:nth-child(2) a {
-            background: hsla(34, 85%, 45%, 1);
-        }
-
-        .breadcrumb li:nth-child(2) a:after {
-            border-left-color: hsla(34, 85%, 45%, 1);
-        }
-
-        .breadcrumb li:nth-child(3) a {
-            background: hsla(34, 85%, 55%, 1);
-        }
-
-        .breadcrumb li:nth-child(3) a:after {
-            border-left-color: hsla(34, 85%, 55%, 1);
-        }
-
-        .breadcrumb li:nth-child(4) a {
-            background: hsla(34, 85%, 65%, 1);
-        }
-
-        .breadcrumb li:nth-child(4) a:after {
-            border-left-color: hsla(34, 85%, 65%, 1);
-        }
-
-        .breadcrumb li:nth-child(5) a {
-            background: hsla(34, 85%, 67%, 1);
-        }
-
-        .breadcrumb li:nth-child(5) a:after {
-            border-left-color: hsla(34, 85%, 67%, 1);
-        }
-
-        .breadcrumb li:nth-child(6) a {
-            background: hsla(34, 85%, 69%, 1);
-        }
-
-        .breadcrumb li:nth-child(6) a:after {
-            border-left-color: hsla(34, 85%, 69%, 1);
-        }
-
-        .breadcrumb li:nth-child(7) a {
-            background: hsla(34, 85%, 72%, 1);
-        }
-
-        .breadcrumb li:nth-child(7) a:after {
-            border-left-color: hsla(34, 85%, 72%, 1);
-        }
-
-        .breadcrumb li:nth-child(8) a {
-            background: hsla(34, 85%, 74%, 1);
-        }
-
-        .breadcrumb li:nth-child(8) a:after {
-            border-left-color: hsla(34, 85%, 74%, 1);
-        }
-
+        .breadcrumb li:nth-child(2) a       { background:        hsla(34,85%,45%,1); }
+        .breadcrumb li:nth-child(2) a:after { border-left-color: hsla(34,85%,45%,1); }
+        .breadcrumb li:nth-child(3) a       { background:        hsla(34,85%,55%,1); }
+        .breadcrumb li:nth-child(3) a:after { border-left-color: hsla(34,85%,55%,1); }
+        .breadcrumb li:nth-child(4) a       { background:        hsla(34,85%,65%,1); }
+        .breadcrumb li:nth-child(4) a:after { border-left-color: hsla(34,85%,65%,1); }
+        .breadcrumb li:nth-child(5) a       { background:        hsla(34,85%,67%,1); }
+        .breadcrumb li:nth-child(5) a:after { border-left-color: hsla(34,85%,67%,1); }
+        .breadcrumb li:nth-child(6) a       { background:        hsla(34,85%,69%,1); }
+        .breadcrumb li:nth-child(6) a:after { border-left-color: hsla(34,85%,69%,1); }
+        .breadcrumb li:nth-child(7) a       { background:        hsla(34,85%,72%,1); }
+        .breadcrumb li:nth-child(7) a:after { border-left-color: hsla(34,85%,72%,1); }
+        .breadcrumb li:nth-child(8) a       { background:        hsla(34,85%,74%,1); }
+        .breadcrumb li:nth-child(8) a:after { border-left-color: hsla(34,85%,74%,1); }
         .breadcrumb li:last-child a {
             #background: transparent !important;
             #color: black;
@@ -215,19 +159,12 @@
             cursor: default;
         }
 
-        .breadcrumb li a:hover {
-            background: hsla(34, 85%, 25%, 1);
-        }
-
-        .breadcrumb li a:hover:after {
-            border-left-color: hsla(34, 85%, 25%, 1) !important;
-        }
+        .breadcrumb li a:hover { background: hsla(34,85%,25%,1); }
+        .breadcrumb li a:hover:after { border-left-color: hsla(34,85%,25%,1) !important; }
 
         /* CSSTerm.com Simple CSS menu */
 
-        #br {
-            clear: left
-        }
+        #br { clear:left }
 
         .menu_simple {
             width: 100%;
@@ -235,8 +172,7 @@
         }
 
         .menu_simple ul {
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             float: left;
         }
 
@@ -245,8 +181,7 @@
         }
 
         .menu_simple ul li a {
-            float: left;
-            text-decoration: none;
+            float: left; text-decoration: none;
             color: white;
             padding: 10.5px 11px;
             background-color: #417690;
@@ -256,1994 +191,854 @@
             color: white;
         }
 
-        .menu_simple ul li a:hover,
-        .menu_simple ul li .current {
+        .menu_simple ul li a:hover, .menu_simple ul li .current {
             color: white;
             background-color: #5FD367;
         }
     </style>
 </head>
-
 <body>
-    <div class="menu_simple">
-        <ul>
-            <li>
-                <a href="/">
-                    Main page
-                </a>
-            </li>
-            <li>
-                <a href="/orgs/">
-                    Organizations list
-                </a>
-            </li>
-            <li>
-                <a href="/contacts">
-                    Contacts
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div style="clear: both">
-    </div>
-    <h1>
-        Reference record for OID 1.0.3166
-    </h1>
-    <div>
-        <ul class="breadcrumb">
-            <li class="first">
-                <a href="/1">
-                    1 iso
-                </a>
-            </li>
-            <li>
-                <a href="/1.0">
-                    0 standard, std
-                </a>
-            </li>
-            <li class="last">
-                <a href="/1.0.3166">
-                    3166 country-codes
-                </a>
-            </li>
-        </ul>
-    </div>
-    <dl>
-        <dt>
-            parent
-        </dt>
-        <dd>
-            <a href="/1.0">
-                1.0
-            </a>
-            (standard, std)
-        </dd>
-        <dt>
-            node code
-        </dt>
-        <dd>
-            3166
-        </dd>
-        <dt>
-            node name
-        </dt>
-        <dd>
-            country-codes
-        </dd>
-        <dt>
-            dot oid
-        </dt>
-        <dd>
-            1.0.3166
-        </dd>
-        <dt>
-            asn1 oid
-        </dt>
-        <dd>
-            <li>
-                {iso(1) standard(0) country-codes(3166)}
-            </li>
-            <li>
-                {iso(1) std(0) country-codes(3166)}
-            </li>
-        </dd>
-        <dt>
-            iri oid
-        </dt>
-        <dd>
-            <li>
-                /iso/standard/country-codes
-            </li>
-            <li>
-                /iso/std/country-codes
-            </li>
-        </dd>
-        <dt>
-            iri by oid_info
-        </dt>
-        <dd>
-            /ISO/Standard/3166
-        </dd>
-        <dt>
-            creation date
-        </dt>
-        <dd>
-            Aug. 18, 2008
-        </dd>
-    </dl>
-    <script async="" crossorigin="anonymous"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7259431324845243">
-        </script>
-    <h3>
-        Description by oid_info
-    </h3>
-    <p>
-        ISO 3166 "Codes for the representation of names of countries and their subdivisions"
-        <br />
-        <a href="http://oid-info.com/get/1.0.3166" rel="nofollow" target="_blank">
-            View at oid-info.com
-        </a>
-    </p>
-    <h3>
-        Information by oid_info
-    </h3>
-    <p>
-        More information from the
-        <a href="http://www.iso.org/iso/home/standards/country_codes.htm">
-            Maintenance Agency for ISO 3166 country codes
-        </a>
-        .
-    </p>
-    <h3>
-        First Registration Authority
-    </h3>
-    <p>
-        <a href="/org/iso-3166-maintenance-agency">
-            ISO 3166 Maintenance Agency
-        </a>
-    <p>
-        Address: c/o International Organization for Standardization
-        <br />
-        Case postale 56
-        <br />
-        CH-1211 Genève 20
-        <br />
-        Switzerland
-    <p>
-        Phone: +41 22 749 02 22
-    <p>
-        Fax: +41 22 749 01 55
-    <h3>
-        Current Registration Authority (recovered by parent
-        <a href="/1.0">
-            1.0)
-        </a>
-    </h3>
-    <p>
-        <a href="/org/iso-and-iec">
-            ISO and IEC
-        </a>
-    <h3>
-        Children (3)
-    </h3>
-    <table>
-        <tr>
-            <th>
-                OID
-            </th>
-            <th>
-                Name
-            </th>
-            <th>
-                Sub children
-            </th>
-            <th>
-                Sub Nodes Total
-            </th>
-            <th>
-                Description
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.3166.1" title="1.0.3166.1 part1 ">
-                    1.0.3166.1
-                </a>
-            </td>
-            <td>
-                part1
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                4
-            </td>
-            <td>
-                ISO 3166-1 on Country codes
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.3166.2" title="1.0.3166.2 part2 ">
-                    1.0.3166.2
-                </a>
-            </td>
-            <td>
-                part2
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                7
-            </td>
-            <td>
-                ISO 3166-2 on Country subdivision code
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.3166.3" title="1.0.3166.3 part3 ">
-                    1.0.3166.3
-                </a>
-            </td>
-            <td>
-                part3
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                ISO 3166-3 on Code for formerly used names of countries
-            </td>
-        </tr>
-    </table>
-    <h3>
-        Brothers (86)
-    </h3>
-    <table>
-        <tr>
-            <th>
-                OID
-            </th>
-            <th>
-                Name
-            </th>
-            <th>
-                Sub children
-            </th>
-            <th>
-                Sub Nodes Total
-            </th>
-            <th>
-                Description
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.639" title="1.0.639 639 ">
-                    1.0.639
-                </a>
-            </td>
-            <td>
-                639
-            </td>
-            <td>
-                3
-            </td>
-            <td>
-                3
-            </td>
-            <td>
-                Series of ISO 639 International Standards "Codes for the representation of names of languages"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.1087" title="1.0.1087 1087 ">
-                    1.0.1087
-                </a>
-            </td>
-            <td>
-                1087
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                ISO 1087 series "Terminology work - Vocabulary"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.2022" title="1.0.2022 2022 ">
-                    1.0.2022
-                </a>
-            </td>
-            <td>
-                2022
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                ISO/IEC 2022 "Information technology - Character code structure and extension techniques"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.2382" title="1.0.2382 2382 ">
-                    1.0.2382
-                </a>
-            </td>
-            <td>
-                2382
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                ISO/IEC 2382 series "Information technology -- Vocabulary"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.4217" title="1.0.4217 iso4217 ">
-                    1.0.4217
-                </a>
-            </td>
-            <td>
-                iso4217
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                ISO 4217 "Currency Codes"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.5218" title="1.0.5218 human-sexes ">
-                    1.0.5218
-                </a>
-            </td>
-            <td>
-                human-sexes
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                <a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=36266">
-                    ISO/IEC 5218
-                </a>
-                "Information technology -- Codes for the representation of human sexes"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.6523" title="1.0.6523 iso6523 ">
-                    1.0.6523
-                </a>
-            </td>
-            <td>
-                iso6523
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                ISO/IEC 6523 "Information technology -- Structure for the identification of organizations and
-                organization parts"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.7498" title="1.0.7498 7498 ">
-                    1.0.7498
-                </a>
-            </td>
-            <td>
-                7498
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                ISO/IEC 7498 series "Information processing systems -- Open Systems Interconnection -- Basic Reference
-                Model"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.7816" title="1.0.7816 iso7816 ">
-                    1.0.7816
-                </a>
-            </td>
-            <td>
-                iso7816
-            </td>
-            <td>
-                3
-            </td>
-            <td>
-                4
-            </td>
-            <td>
-                ISO 7816 series "Information technology -- Identification cards -- Integrated circuit(s) cards with
-                contacts"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.8571" title="1.0.8571 iso8571 ">
-                    1.0.8571
-                </a>
-            </td>
-            <td>
-                iso8571
-            </td>
-            <td>
-                5
-            </td>
-            <td>
-                23
-            </td>
-            <td>
-                OSI (Open Systems Interconnection) FTAM (File Transfer, Access and Management)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.8601" title="1.0.8601 8601 ">
-                    1.0.8601
-                </a>
-            </td>
-            <td>
-                8601
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                ISO 8601 "Data elements and interchange formats -- Information interchange -- Representation of dates
-                and times"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.8802" title="1.0.8802 iso8802 ">
-                    1.0.8802
-                </a>
-            </td>
-            <td>
-                iso8802
-            </td>
-            <td>
-                3
-            </td>
-            <td>
-                1252
-            </td>
-            <td>
-                ISO/IEC 8802 "Information technology -- Telecommunications and information exchange between systems --
-                Local and metropolitan a…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.9040" title="1.0.9040 vt-b ">
-                    1.0.9040
-                </a>
-            </td>
-            <td>
-                vt-b
-            </td>
-            <td>
-                5
-            </td>
-            <td>
-                17
-            </td>
-            <td>
-                <a href="http://www.iso.org/iso/catalogue_detail?csnumber=28785">
-                    ISO/IEC 9040
-                </a>
-                : Information technology -- Open Systems Interconnection -- Virtual Terminal Basic Class Service
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.9041" title="1.0.9041 iso9041 ">
-                    1.0.9041
-                </a>
-            </td>
-            <td>
-                iso9041
-            </td>
-            <td>
-                3
-            </td>
-            <td>
-                6
-            </td>
-            <td>
-                <a href="http://www.iso.org/iso/catalogue_detail?csnumber=28786">
-                    ISO/IEC 9041
-                </a>
-                series: Information technology -- Open Systems Interconnection -- Virtual Terminal Basic Class Protocol
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.9069" title="1.0.9069 9069 ">
-                    1.0.9069
-                </a>
-            </td>
-            <td>
-                9069
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                3
-            </td>
-            <td>
-                ISO 9069 "Information processing -- Standard Generalized Markup Language (SGML) support facilities --
-                SGML Document Interchange…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.9362" title="1.0.9362 bic ">
-                    1.0.9362
-                </a>
-            </td>
-            <td>
-                bic
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                ISO 9362 "Banking -- Banking telecommunication messages -- Business Identifier Code (BIC)"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.9506" title="1.0.9506 iso9506 ">
-                    1.0.9506
-                </a>
-            </td>
-            <td>
-                iso9506
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                11
-            </td>
-            <td>
-                ISO 9506 Standard: Industrial automation systems -- Manufacturing Message Specification
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.9796" title="1.0.9796 signature-schemes ">
-                    1.0.9796
-                </a>
-            </td>
-            <td>
-                signature-schemes
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                32
-            </td>
-            <td>
-                ISO/IEC 9796 International Standard: Information technology - Security techniques - Digital signature
-                schemes giving message re…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.9797" title="1.0.9797 message-authentication-codes ">
-                    1.0.9797
-                </a>
-            </td>
-            <td>
-                message-authentication-codes
-            </td>
-            <td>
-                3
-            </td>
-            <td>
-                32
-            </td>
-            <td>
-                ISO/IEC 9797: Information technology -- Security techniques
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.9798" title="1.0.9798 iso9798 ">
-                    1.0.9798
-                </a>
-            </td>
-            <td>
-                iso9798
-            </td>
-            <td>
-                6
-            </td>
-            <td>
-                55
-            </td>
-            <td>
-                ISO 9798 series "Information technology -- Security techniques -- Entity authentication"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.9834" title="1.0.9834 9834 ">
-                    1.0.9834
-                </a>
-            </td>
-            <td>
-                9834
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                9
-            </td>
-            <td>
-                ISO 9834 Series "Information technology -- Open Systems Interconnection -- Procedures for the operation
-                of OSI Registration Aut…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.9979" title="1.0.9979 iso9979 ">
-                    1.0.9979
-                </a>
-            </td>
-            <td>
-                iso9979
-            </td>
-            <td>
-                24
-            </td>
-            <td>
-                24
-            </td>
-            <td>
-                <a href="http://www.iso.org/iso/catalogue_detail?csnumber=28107">
-                    ISO/IEC 9979
-                </a>
-                : International Standard: Information Technology -- Security techniques -- Procedures for the
-                registration of crypt…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.9992" title="1.0.9992 mess ">
-                    1.0.9992
-                </a>
-            </td>
-            <td>
-                mess
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                ISO/IEC 9992 series "Financial transaction cards -- Messages between the integrated circuit card and the
-                card accepting Device"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.10021" title="1.0.10021 mhs ">
-                    1.0.10021
-                </a>
-            </td>
-            <td>
-                mhs
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                9
-            </td>
-            <td>
-                <a href="http://www.iso.org/iso/home/search.htm?qt=10021&amp;sort=rel&amp;type=simple&amp;published=on">
-                    ISO/IEC 10021
-                </a>
-                ISO/IEC 10021 "Information Technology -- Message Handling System (MHS)"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.10116" title="1.0.10116 modes-of-operation ">
-                    1.0.10116
-                </a>
-            </td>
-            <td>
-                modes-of-operation
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                15
-            </td>
-            <td>
-                ISO/IEC 10116 "Information technology -- Security techniques -- Modes of operation for an n-bit block
-                cipher"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.10118" title="1.0.10118 hash-functions ">
-                    1.0.10118
-                </a>
-            </td>
-            <td>
-                hash-functions
-            </td>
-            <td>
-                4
-            </td>
-            <td>
-                30
-            </td>
-            <td>
-                ISO/IEC 10118: Information technology -- Security techniques -- Hash-functions
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.10161" title="1.0.10161 iso10161 ">
-                    1.0.10161
-                </a>
-            </td>
-            <td>
-                iso10161
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                4
-            </td>
-            <td>
-                ISO 10161 "Information and documentation -- Open Systems Interconnection -- Interlibrary Loan
-                Application Protocol Specificatio…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.10166" title="1.0.10166 10166 ">
-                    1.0.10166
-                </a>
-            </td>
-            <td>
-                10166
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                50
-            </td>
-            <td>
-                ISO/IEC 10166 International Standard: Information technology -- Text and office systems -- Document
-                Filing and Retrieval (DFR)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.10374" title="1.0.10374 10374 ">
-                    1.0.10374
-                </a>
-            </td>
-            <td>
-                10374
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                International Standard ISO 10374: Freight containers -- Automatic identification
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.10646" title="1.0.10646 iso10646 ">
-                    1.0.10646
-                </a>
-            </td>
-            <td>
-                iso10646
-            </td>
-            <td>
-                3
-            </td>
-            <td>
-                31
-            </td>
-            <td>
-                ISO/IEC 10646 "Information technology -- Universal multiple-octet coded Character Set (UCS)"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.10746" title="1.0.10746 10746 ">
-                    1.0.10746
-                </a>
-            </td>
-            <td>
-                10746
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                ISO/IEC 10746 series "Information technology -- Open Distributed Processing -- Reference model"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.10891" title="1.0.10891 10891 ">
-                    1.0.10891
-                </a>
-            </td>
-            <td>
-                10891
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                ISO/TS 10891: Freight containers -- Radio frequency identification (RFID) -- Licence plate tag
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.11188" title="1.0.11188 iso11188 ">
-                    1.0.11188
-                </a>
-            </td>
-            <td>
-                iso11188
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                6
-            </td>
-            <td>
-                <a
-                    href="http://www.iso.org/iso/home/search.htm?qt=11188&amp;sort=rel&amp;type=simple&amp;published=on&amp;withdrawn=on">
-                    ISO/IEC 11188
-                </a>
-                "Information technology -- International Standardized Profile -- Common upper layer requirements"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.11404" title="1.0.11404 11404 ">
-                    1.0.11404
-                </a>
-            </td>
-            <td>
-                11404
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                ISO/IEC 11404 "Information technology -- Programming languages, their environments and system software
-                interfaces -- Language-i…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.11578" title="1.0.11578 rpc ">
-                    1.0.11578
-                </a>
-            </td>
-            <td>
-                rpc
-            </td>
-            <td>
-                3
-            </td>
-            <td>
-                6
-            </td>
-            <td>
-                <a href="http://www.iso.org/iso/catalogue_detail?csnumber=2229">
-                    ISO/IEC 11578:1996
-                </a>
-                : Information technology -- Open Systems Interconnection -- Remote Procedure Call (RPC)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.11582" title="1.0.11582 pss1-generic-procedures ">
-                    1.0.11582
-                </a>
-            </td>
-            <td>
-                pss1-generic-procedures
-            </td>
-            <td>
-                6
-            </td>
-            <td>
-                6
-            </td>
-            <td>
-                ISO/IEC 11582:2002: "Generic functional protocol for the support of supplementary services --
-                Inter-exchange signalling procedu…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.11770" title="1.0.11770 key-management ">
-                    1.0.11770
-                </a>
-            </td>
-            <td>
-                key-management
-            </td>
-            <td>
-                6
-            </td>
-            <td>
-                196
-            </td>
-            <td>
-                ISO/IEC 11770: Information technology -- Security techniques -- Key management
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.12813" title="1.0.12813 12813 ">
-                    1.0.12813
-                </a>
-            </td>
-            <td>
-                12813
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                4
-            </td>
-            <td>
-                ISO 12813 "Electronic fee collection -- Compliance check communication for autonomous systems"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.12855" title="1.0.12855 12855 ">
-                    1.0.12855
-                </a>
-            </td>
-            <td>
-                12855
-            </td>
-            <td>
-                3
-            </td>
-            <td>
-                7
-            </td>
-            <td>
-                ISO 12855: Electronic fee collection -- Information exchange between service provision and toll charging
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.13141" title="1.0.13141 13141 ">
-                    1.0.13141
-                </a>
-            </td>
-            <td>
-                13141
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                ISO 13141 "Electronic fee collection -- Localisation augmentation communication for autonomous systems"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.13616" title="1.0.13616 iban ">
-                    1.0.13616
-                </a>
-            </td>
-            <td>
-                iban
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                <a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=41031">
-                    ISO 13616
-                </a>
-                "Financial services -- International Bank Account Number (IBAN)"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.13868" title="1.0.13868 pss1-name ">
-                    1.0.13868
-                </a>
-            </td>
-            <td>
-                pss1-name
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                <a href="http://www.iso.org/iso/catalogue_detail?csnumber=36839">
-                    ISO/IEC 13868:2003
-                </a>
-                : Information technology -- Telecommunications and information exchange between systems -- Private
-                Integrated…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.13869" title="1.0.13869 pss1-call-transfer ">
-                    1.0.13869
-                </a>
-            </td>
-            <td>
-                pss1-call-transfer
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                ISO 13869: Information technology -- Telecommunications and information exchange between systems --
-                Private Integrated Services…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.13873" title="1.0.13873 pss1-call-diversion ">
-                    1.0.13873
-                </a>
-            </td>
-            <td>
-                pss1-call-diversion
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                ISO/IEC 13873: Information technology -- Telecommunications and information exchange between systems --
-                Private Integrated Serv…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.13888" title="1.0.13888 non-repudiation ">
-                    1.0.13888
-                </a>
-            </td>
-            <td>
-                non-repudiation
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                ISO/IEC 13888
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.14813" title="1.0.14813 iso14813 ">
-                    1.0.14813
-                </a>
-            </td>
-            <td>
-                iso14813
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                ISO/TR 14813 "Transport Information and Control Systems (TICS) - Reference model architecture(s) for the
-                TICS sector"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.14816" title="1.0.14816 iso14816 ">
-                    1.0.14816
-                </a>
-            </td>
-            <td>
-                iso14816
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                ASN.1 module named
-                <code>
-           AVIAEINumberingAndDataStructures
-          </code>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.14888" title="1.0.14888 digital-signature-with-appendix ">
-                    1.0.14888
-                </a>
-            </td>
-            <td>
-                digital-signature-with-appendix
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                27
-            </td>
-            <td>
-                ISO/IEC 14888 "Information Technology (IT) security techniques -- Digital signatures with appendix"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.14906" title="1.0.14906 14906 ">
-                    1.0.14906
-                </a>
-            </td>
-            <td>
-                14906
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                8
-            </td>
-            <td>
-                ISO 14906: Road transport and traffic telematics -- Electronic fee collection -- Application interface
-                definition for dedicated…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.15418" title="1.0.15418 15418 ">
-                    1.0.15418
-                </a>
-            </td>
-            <td>
-                15418
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                ISO/IEC 15418:2009 "Information technology -- Automatic identification and data capture techniques --
-                GS1 Application Identifie…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.15434" title="1.0.15434 iso15434 ">
-                    1.0.15434
-                </a>
-            </td>
-            <td>
-                iso15434
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                ISO/IEC 15434 'Transfer Syntax for High Capacity data carrier"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.15459" title="1.0.15459 iso15459 ">
-                    1.0.15459
-                </a>
-            </td>
-            <td>
-                iso15459
-            </td>
-            <td>
-                3
-            </td>
-            <td>
-                24
-            </td>
-            <td>
-                ISO/IEC 15459 "Information technology -- Unique identification of transport units"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.15628" title="1.0.15628 dsrc ">
-                    1.0.15628
-                </a>
-            </td>
-            <td>
-                dsrc
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                ISO 15628 "Road transport and traffic telematics -- Dedicated Short Range Communication (DSRC) -- DSRC
-                application layer"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.15946" title="1.0.15946 elliptic-curves ">
-                    1.0.15946
-                </a>
-            </td>
-            <td>
-                elliptic-curves
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                ISO/IEC 15946 "Information technology -- Security techniques -- Cryptographic techniques based on
-                elliptic curves"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.15961" title="1.0.15961 rfid-data-protocol ">
-                    1.0.15961
-                </a>
-            </td>
-            <td>
-                rfid-data-protocol
-            </td>
-            <td>
-                12
-            </td>
-            <td>
-                675
-            </td>
-            <td>
-                ISO/IEC 15961 "Information technology - Automatic identification and data capture - Radio frequency
-                identification (RFID) for i…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.16785" title="1.0.16785 16785 ">
-                    1.0.16785
-                </a>
-            </td>
-            <td>
-                16785
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                40
-            </td>
-            <td>
-                <a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=65675">
-                    ISO/TS 16785
-                </a>
-                "Electronic Fee Collection (EFC) -- Interface definition between 'Dedicated Short Range Communication
-                (DSRC)-On-Bo…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.17090" title="1.0.17090 hcpki ">
-                    1.0.17090
-                </a>
-            </td>
-            <td>
-                hcpki
-            </td>
-            <td>
-                3
-            </td>
-            <td>
-                4
-            </td>
-            <td>
-                ISO 17090 "Health informatics -- Public key infrastructure"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.17575" title="1.0.17575 17575 ">
-                    1.0.17575
-                </a>
-            </td>
-            <td>
-                17575
-            </td>
-            <td>
-                3
-            </td>
-            <td>
-                7
-            </td>
-            <td>
-                ISO TS 17575: Road Transport and Traffic Telematics (RTTT) -- Electronic Fee Collection (EFC)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.18014" title="1.0.18014 tss ">
-                    1.0.18014
-                </a>
-            </td>
-            <td>
-                tss
-            </td>
-            <td>
-                6
-            </td>
-            <td>
-                39
-            </td>
-            <td>
-                ISO/IEC 18014: Information technology -- Security techniques -- Time-stamping services
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.18031" title="1.0.18031 random-bit-generation ">
-                    1.0.18031
-                </a>
-            </td>
-            <td>
-                random-bit-generation
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                ISO/IEC 18031
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.18032" title="1.0.18032 prime-number-generation ">
-                    1.0.18032
-                </a>
-            </td>
-            <td>
-                prime-number-generation
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                ISO/IEC 18032 "Information technology -- Security techniques -- Prime number generation"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.18033" title="1.0.18033 encryption-algorithms ">
-                    1.0.18033
-                </a>
-            </td>
-            <td>
-                encryption-algorithms
-            </td>
-            <td>
-                4
-            </td>
-            <td>
-                68
-            </td>
-            <td>
-                ISO/IEC 18033: Information technology -- Security techniques -- Encryption algorithms
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.18370" title="1.0.18370 blind-digital-signatures-mechanisms ">
-                    1.0.18370
-                </a>
-            </td>
-            <td>
-                blind-digital-signatures-mechanisms
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                9
-            </td>
-            <td>
-                ISO/IEC 18370 "Information technology -- Security techniques -- Blind digital signatures"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.19592" title="1.0.19592 secret-sharing ">
-                    1.0.19592
-                </a>
-            </td>
-            <td>
-                secret-sharing
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                17
-            </td>
-            <td>
-                ISO/IEC 19592 "Information technology -- Security techniques -- Secret Sharing"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.19772" title="1.0.19772 authenticated-encryption ">
-                    1.0.19772
-                </a>
-            </td>
-            <td>
-                authenticated-encryption
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                9
-            </td>
-            <td>
-                ISO/IEC 19772: Information technology -- Security techniques -- Authenticated encryption
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.19785" title="1.0.19785 cbeff ">
-                    1.0.19785
-                </a>
-            </td>
-            <td>
-                cbeff
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                10
-            </td>
-            <td>
-                ISO/IEC 19785: Information Technology -- Common Biometric Exchange Formats Framework
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.19794" title="1.0.19794 19794 ">
-                    1.0.19794
-                </a>
-            </td>
-            <td>
-                19794
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                6
-            </td>
-            <td>
-                ISO/IEC 19794 series "Information technology -- Biometric data
-                <br />
-                interchange formats"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.20008" title="1.0.20008 anonymous-digital-signatures ">
-                    1.0.20008
-                </a>
-            </td>
-            <td>
-                anonymous-digital-signatures
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                11
-            </td>
-            <td>
-                ISO/IEC 20008 "Information technology -- Security
-                <br />
-                techniques -- Anonymous digital signature"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.20009" title="1.0.20009 anonymous-entity-authentication ">
-                    1.0.20009
-                </a>
-            </td>
-            <td>
-                anonymous-entity-authentication
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                36
-            </td>
-            <td>
-                ISO/IEC 20009 series "Information technology -- Security techniques -- Anonymous entity authentication"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.20022" title="1.0.20022 unifi ">
-                    1.0.20022
-                </a>
-            </td>
-            <td>
-                unifi
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                <a href="http://www.iso20022.org">
-                    ISO 20022
-                </a>
-                : Universal Financial Industry message scheme
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.20248" title="1.0.20248 20248 ">
-                    1.0.20248
-                </a>
-            </td>
-            <td>
-                20248
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                ISO/IEC 20248 "Automatic identification and data capture techniques -- Data structures -- Digital
-                Signature meta structure"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.20828" title="1.0.20828 scm-standard ">
-                    1.0.20828
-                </a>
-            </td>
-            <td>
-                scm-standard
-            </td>
-            <td>
-                4
-            </td>
-            <td>
-                4
-            </td>
-            <td>
-                ASN.1 module named
-                <code>
-           SecurityCertificateManagement
-          </code>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.21000" title="1.0.21000 21000 ">
-                    1.0.21000
-                </a>
-            </td>
-            <td>
-                21000
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                ISO/IEC 21000 series "Information technology -- Multimedia framework (MPEG-21)"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.21091" title="1.0.21091 21091 ">
-                    1.0.21091
-                </a>
-            </td>
-            <td>
-                21091
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                68
-            </td>
-            <td>
-                <a href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=51432">
-                    ISO 21091
-                </a>
-                "Health informatics -- Directory services for healthcare providers, subjects of care and other entities"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.21218" title="1.0.21218 calm-ll-sap ">
-                    1.0.21218
-                </a>
-            </td>
-            <td>
-                calm-ll-sap
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                ISO 21218 "Intelligent transport systems -- Communications Access for Land Mobiles (CALM) -- Medium
-                service access points"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.22895" title="1.0.22895 css ">
-                    1.0.22895
-                </a>
-            </td>
-            <td>
-                css
-            </td>
-            <td>
-                3
-            </td>
-            <td>
-                11
-            </td>
-            <td>
-                ISO 22895: Financial services - Security - Cryptographic syntax scheme
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.24102" title="1.0.24102 calm-management ">
-                    1.0.24102
-                </a>
-            </td>
-            <td>
-                calm-management
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                ISO 24102 "Intelligent transport systems -- Communications Access for Land Mobiles (CALM) -- Management"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.24531" title="1.0.24531 24531 ">
-                    1.0.24531
-                </a>
-            </td>
-            <td>
-                24531
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                ISO 24531 "Intelligent Transport Systems (ITS) -- System architecture, taxonomy and terminology -- Using
-                eXtensible Markup Lang…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.24727" title="1.0.24727 iso24727 ">
-                    1.0.24727
-                </a>
-            </td>
-            <td>
-                iso24727
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                29
-            </td>
-            <td>
-                ISO/IEC 24727: Identification cards -- Integrated circuit card programming interfaces
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.24753" title="1.0.24753 24753 ">
-                    1.0.24753
-                </a>
-            </td>
-            <td>
-                24753
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                34
-            </td>
-            <td>
-                ISO/IEC 24753:Information technology -- Radio frequency identification (RFID) for item management --
-                Application protocol: enco…
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.24761" title="1.0.24761 acbio ">
-                    1.0.24761
-                </a>
-            </td>
-            <td>
-                acbio
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                13
-            </td>
-            <td>
-                ISO/IEC 24761: Information technology -- Security techniques -- Authentication context for biometrics
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.29150" title="1.0.29150 signcryption ">
-                    1.0.29150
-                </a>
-            </td>
-            <td>
-                signcryption
-            </td>
-            <td>
-                2
-            </td>
-            <td>
-                8
-            </td>
-            <td>
-                ISO/IEC 29150: Information technology -- Security techniques -- Signcryption
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.29192" title="1.0.29192 lightweight-cryptography ">
-                    1.0.29192
-                </a>
-            </td>
-            <td>
-                lightweight-cryptography
-            </td>
-            <td>
-                4
-            </td>
-            <td>
-                39
-            </td>
-            <td>
-                ISO/IEC 29192-4: Information technology -- Security techniques -- Lightweight cryptography
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.62351" title="1.0.62351 62351 ">
-                    1.0.62351
-                </a>
-            </td>
-            <td>
-                62351
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-            <td>
-                IEC 62351 "Power systems management and associated information exchange -- Data and communications
-                security"
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.62379" title="1.0.62379 iec62379 ">
-                    1.0.62379
-                </a>
-            </td>
-            <td>
-                iec62379
-            </td>
-            <td>
-                1
-            </td>
-            <td>
-                108
-            </td>
-            <td>
-                IEC 62379: Common Control Interface
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="/1.0.62439" title="1.0.62439 62439 ">
-                    1.0.62439
-                </a>
-            </td>
-            <td>
-                62439
-            </td>
-            <td>
-                6
-            </td>
-            <td>
-                24
-            </td>
-            <td>
-                MIB module named
-                <code>
-           IEC-62439-3-MIB
-          </code>
-                which defines the Network Management interfaces for the redundancy protocols defined by the IE…
-            </td>
-        </tr>
-    </table>
-    </p>
-    </p>
-    </p>
-    </p>
-    </p>
-</body>
 
+    <div class="menu_simple">
+    <ul>
+        <li><a href="/">Main page</a></li>
+        <li><a href="/orgs/">Organizations list</a></li>
+        <li><a href="/contacts">Contacts</a></li>
+    </ul>
+    </div>
+    <div style="clear: both"></div>
+
+
+<h1>Reference record for OID 1.0.3166</h1>
+
+<div>
+<ul class="breadcrumb">
+
+    <li
+            
+            class="first"
+            
+    ><a href="/1">1 iso</a></li>
+    
+
+    <li
+            
+    ><a href="/1.0">0 standard, std</a></li>
+    
+
+    <li
+            
+            class="last"
+            
+    ><a href="/1.0.3166">3166 country-codes</a></li>
+    
+
+</ul>
+</div>
+
+<dl>
+    <dt>parent</dt><dd><a href="/1.0">1.0</a> (standard, std)</dd>
+    <dt>node code</dt><dd>3166</dd>
+
+    <dt>node name</dt><dd>country-codes</dd>
+
+    <dt>dot oid</dt><dd>1.0.3166</dd>
+
+    <dt>asn1 oid</dt><dd>
+        	<li>{iso(1) standard(0) country-codes(3166)}</li>
+	<li>{iso(1) std(0) country-codes(3166)}</li>
+    </dd>
+    <dt>iri oid</dt><dd>	<li>/iso/standard/country-codes</li>
+	<li>/iso/std/country-codes</li></dd>
+    
+        <dt>iri by oid_info</dt><dd>/ISO/Standard/3166</dd>
+    
+    
+        <dt>creation date</dt><dd>Aug. 18, 2008</dd>
+    
+
+    
+
+</dl>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7259431324845243"
+     crossorigin="anonymous"></script>
+
+    
+        <h3>Description by oid_info</h3>
+        <p>ISO 3166 "Codes for the representation of names of countries and their subdivisions"
+        
+            <br/>
+            <a href="http://oid-info.com/get/1.0.3166" target="_blank" rel="nofollow">View at oid-info.com</a>
+        
+        </p>
+
+    
+
+
+    
+        <h3>Information by oid_info</h3>
+
+<p>More information from the <a href="http://www.iso.org/iso/home/standards/country_codes.htm">Maintenance Agency for ISO 3166 country codes</a>.</p>
+
+    
+
+
+
+    <h3>First Registration Authority</h3>
+    <p><a href="/org/iso-3166-maintenance-agency"> ISO 3166 Maintenance Agency </a>
+    <p>Address: c/o International Organization for Standardization<br>
+Case postale 56<br>
+CH-1211 Gen&egrave;ve 20<br>
+Switzerland 
+    <p>Phone: +41 22 749 02 22 
+    <p>Fax: +41 22 749 01 55 
+
+
+
+    <h3>Current Registration Authority (recovered by parent <a href="/1.0">1.0)</a></h3>
+    <p><a href="/org/iso-and-iec">
+        ISO and IEC
+    </a>
+
+
+
+    <h3>Children (3)</h3>
+    <table>
+    
+        <tr><th>OID</th><th>Name</th><th>Sub children</th><th>Sub Nodes Total</th><th>Description</th></tr>
+        
+            <tr>
+                <td><a href="/1.0.3166.1" title="1.0.3166.1 part1 ">1.0.3166.1</a></td>
+                <td>part1</td>
+                <td>1</td>
+                <td>4</td>
+                <td>ISO 3166-1 on Country codes</td>
+            </tr>
+        
+            <tr>
+                <td><a href="/1.0.3166.2" title="1.0.3166.2 part2 ">1.0.3166.2</a></td>
+                <td>part2</td>
+                <td>1</td>
+                <td>7</td>
+                <td>ISO 3166-2 on Country subdivision code</td>
+            </tr>
+        
+            <tr>
+                <td><a href="/1.0.3166.3" title="1.0.3166.3 part3 ">1.0.3166.3</a></td>
+                <td>part3</td>
+                <td>0</td>
+                <td>0</td>
+                <td>ISO 3166-3 on Code for formerly used names of countries</td>
+            </tr>
+        
+    
+    </table>
+
+
+
+
+    <h3>Brothers (86)</h3>
+    
+    <table>
+    <tr><th>OID</th><th>Name</th><th>Sub children</th><th>Sub Nodes Total</th><th>Description</th></tr>
+    
+    
+        <tr>
+            <td><a href="/1.0.639" title="1.0.639 639 ">1.0.639</a></td>
+            <td>639</td>
+            <td>3</td>
+            <td>3</td>
+            <td>Series of ISO 639 International Standards "Codes for the representation of names of languages"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.1087" title="1.0.1087 1087 ">1.0.1087</a></td>
+            <td>1087</td>
+            <td>1</td>
+            <td>1</td>
+            <td>ISO 1087 series "Terminology work - Vocabulary"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.2022" title="1.0.2022 2022 ">1.0.2022</a></td>
+            <td>2022</td>
+            <td>2</td>
+            <td>2</td>
+            <td>ISO/IEC 2022 "Information technology - Character code structure and extension techniques"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.2382" title="1.0.2382 2382 ">1.0.2382</a></td>
+            <td>2382</td>
+            <td>1</td>
+            <td>1</td>
+            <td>ISO/IEC 2382 series "Information technology -- Vocabulary"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.4217" title="1.0.4217 iso4217 ">1.0.4217</a></td>
+            <td>iso4217</td>
+            <td>0</td>
+            <td>0</td>
+            <td>ISO 4217 "Currency Codes"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.5218" title="1.0.5218 human-sexes ">1.0.5218</a></td>
+            <td>human-sexes</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=36266">ISO/IEC 5218</a> "Information technology -- Codes for the representation of human sexes"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.6523" title="1.0.6523 iso6523 ">1.0.6523</a></td>
+            <td>iso6523</td>
+            <td>0</td>
+            <td>0</td>
+            <td>ISO/IEC 6523 "Information technology -- Structure for the identification of organizations and organization parts"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.7498" title="1.0.7498 7498 ">1.0.7498</a></td>
+            <td>7498</td>
+            <td>1</td>
+            <td>1</td>
+            <td>ISO/IEC 7498 series "Information processing systems -- Open Systems Interconnection -- Basic Reference Model"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.7816" title="1.0.7816 iso7816 ">1.0.7816</a></td>
+            <td>iso7816</td>
+            <td>3</td>
+            <td>4</td>
+            <td>ISO 7816 series "Information technology -- Identification cards -- Integrated circuit(s) cards with contacts"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.8571" title="1.0.8571 iso8571 ">1.0.8571</a></td>
+            <td>iso8571</td>
+            <td>5</td>
+            <td>23</td>
+            <td>OSI (Open Systems Interconnection) FTAM (File Transfer, Access and Management)</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.8601" title="1.0.8601 8601 ">1.0.8601</a></td>
+            <td>8601</td>
+            <td>0</td>
+            <td>0</td>
+            <td>ISO 8601 "Data elements and interchange formats -- Information interchange -- Representation of dates and times"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.8802" title="1.0.8802 iso8802 ">1.0.8802</a></td>
+            <td>iso8802</td>
+            <td>3</td>
+            <td>1252</td>
+            <td>ISO/IEC 8802 "Information technology -- Telecommunications and information exchange between systems -- Local and metropolitan a…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.9040" title="1.0.9040 vt-b ">1.0.9040</a></td>
+            <td>vt-b</td>
+            <td>5</td>
+            <td>17</td>
+            <td><a href="http://www.iso.org/iso/catalogue_detail?csnumber=28785">ISO/IEC 9040</a>: Information technology -- Open Systems Interconnection -- Virtual Terminal Basic Class Service</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.9041" title="1.0.9041 iso9041 ">1.0.9041</a></td>
+            <td>iso9041</td>
+            <td>3</td>
+            <td>6</td>
+            <td><a href="http://www.iso.org/iso/catalogue_detail?csnumber=28786">ISO/IEC 9041</a> series: Information technology -- Open Systems Interconnection -- Virtual Terminal Basic Class Protocol</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.9069" title="1.0.9069 9069 ">1.0.9069</a></td>
+            <td>9069</td>
+            <td>2</td>
+            <td>3</td>
+            <td>ISO 9069 "Information processing -- Standard Generalized Markup Language (SGML) support facilities -- SGML Document Interchange…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.9362" title="1.0.9362 bic ">1.0.9362</a></td>
+            <td>bic</td>
+            <td>0</td>
+            <td>0</td>
+            <td>ISO 9362 "Banking -- Banking telecommunication messages -- Business Identifier Code (BIC)"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.9506" title="1.0.9506 iso9506 ">1.0.9506</a></td>
+            <td>iso9506</td>
+            <td>2</td>
+            <td>11</td>
+            <td>ISO 9506 Standard: Industrial automation systems -- Manufacturing Message Specification</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.9796" title="1.0.9796 signature-schemes ">1.0.9796</a></td>
+            <td>signature-schemes</td>
+            <td>2</td>
+            <td>32</td>
+            <td>ISO/IEC 9796 International Standard: Information technology - Security techniques - Digital signature schemes giving message re…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.9797" title="1.0.9797 message-authentication-codes ">1.0.9797</a></td>
+            <td>message-authentication-codes</td>
+            <td>3</td>
+            <td>32</td>
+            <td>ISO/IEC 9797: Information technology -- Security techniques</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.9798" title="1.0.9798 iso9798 ">1.0.9798</a></td>
+            <td>iso9798</td>
+            <td>6</td>
+            <td>55</td>
+            <td>ISO 9798 series "Information technology -- Security techniques -- Entity authentication"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.9834" title="1.0.9834 9834 ">1.0.9834</a></td>
+            <td>9834</td>
+            <td>2</td>
+            <td>9</td>
+            <td>ISO 9834 Series "Information technology -- Open Systems Interconnection -- Procedures for the operation of OSI Registration Aut…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.9979" title="1.0.9979 iso9979 ">1.0.9979</a></td>
+            <td>iso9979</td>
+            <td>24</td>
+            <td>24</td>
+            <td><a href="http://www.iso.org/iso/catalogue_detail?csnumber=28107">ISO/IEC 9979</a>: International Standard: Information Technology -- Security techniques -- Procedures for the registration of crypt…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.9992" title="1.0.9992 mess ">1.0.9992</a></td>
+            <td>mess</td>
+            <td>1</td>
+            <td>1</td>
+            <td>ISO/IEC 9992 series "Financial transaction cards -- Messages between the integrated circuit card and the card accepting Device"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.10021" title="1.0.10021 mhs ">1.0.10021</a></td>
+            <td>mhs</td>
+            <td>1</td>
+            <td>9</td>
+            <td><a href="http://www.iso.org/iso/home/search.htm?qt=10021&amp;sort=rel&amp;type=simple&amp;published=on">ISO/IEC 10021</a>ISO/IEC 10021 "Information Technology -- Message Handling System (MHS)"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.10116" title="1.0.10116 modes-of-operation ">1.0.10116</a></td>
+            <td>modes-of-operation</td>
+            <td>1</td>
+            <td>15</td>
+            <td>ISO/IEC 10116 "Information technology -- Security techniques -- Modes of operation for an n-bit block cipher"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.10118" title="1.0.10118 hash-functions ">1.0.10118</a></td>
+            <td>hash-functions</td>
+            <td>4</td>
+            <td>30</td>
+            <td>ISO/IEC 10118: Information technology -- Security techniques -- Hash-functions</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.10161" title="1.0.10161 iso10161 ">1.0.10161</a></td>
+            <td>iso10161</td>
+            <td>2</td>
+            <td>4</td>
+            <td>ISO 10161 "Information and documentation -- Open Systems Interconnection -- Interlibrary Loan Application Protocol Specificatio…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.10166" title="1.0.10166 10166 ">1.0.10166</a></td>
+            <td>10166</td>
+            <td>1</td>
+            <td>50</td>
+            <td>ISO/IEC 10166 International Standard: Information technology -- Text and office systems -- Document Filing and Retrieval (DFR)</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.10374" title="1.0.10374 10374 ">1.0.10374</a></td>
+            <td>10374</td>
+            <td>0</td>
+            <td>0</td>
+            <td>International Standard ISO 10374: Freight containers -- Automatic identification</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.10646" title="1.0.10646 iso10646 ">1.0.10646</a></td>
+            <td>iso10646</td>
+            <td>3</td>
+            <td>31</td>
+            <td>ISO/IEC 10646 "Information technology -- Universal multiple-octet coded Character Set (UCS)"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.10746" title="1.0.10746 10746 ">1.0.10746</a></td>
+            <td>10746</td>
+            <td>1</td>
+            <td>1</td>
+            <td>ISO/IEC 10746 series "Information technology -- Open Distributed Processing -- Reference model"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.10891" title="1.0.10891 10891 ">1.0.10891</a></td>
+            <td>10891</td>
+            <td>0</td>
+            <td>0</td>
+            <td>ISO/TS 10891: Freight containers -- Radio frequency identification (RFID) -- Licence plate tag</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.11188" title="1.0.11188 iso11188 ">1.0.11188</a></td>
+            <td>iso11188</td>
+            <td>1</td>
+            <td>6</td>
+            <td><a href="http://www.iso.org/iso/home/search.htm?qt=11188&amp;sort=rel&amp;type=simple&amp;published=on&amp;withdrawn=on">ISO/IEC 11188</a> "Information technology -- International Standardized Profile -- Common upper layer requirements"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.11404" title="1.0.11404 11404 ">1.0.11404</a></td>
+            <td>11404</td>
+            <td>0</td>
+            <td>0</td>
+            <td>ISO/IEC 11404 "Information technology -- Programming languages, their environments and system software interfaces -- Language-i…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.11578" title="1.0.11578 rpc ">1.0.11578</a></td>
+            <td>rpc</td>
+            <td>3</td>
+            <td>6</td>
+            <td><a href="http://www.iso.org/iso/catalogue_detail?csnumber=2229">ISO/IEC 11578:1996</a>: Information technology -- Open Systems Interconnection -- Remote Procedure Call (RPC)</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.11582" title="1.0.11582 pss1-generic-procedures ">1.0.11582</a></td>
+            <td>pss1-generic-procedures</td>
+            <td>6</td>
+            <td>6</td>
+            <td>ISO/IEC 11582:2002: "Generic functional protocol for the support of supplementary services -- Inter-exchange signalling procedu…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.11770" title="1.0.11770 key-management ">1.0.11770</a></td>
+            <td>key-management</td>
+            <td>6</td>
+            <td>196</td>
+            <td>ISO/IEC 11770: Information technology -- Security techniques -- Key management</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.12813" title="1.0.12813 12813 ">1.0.12813</a></td>
+            <td>12813</td>
+            <td>2</td>
+            <td>4</td>
+            <td>ISO 12813 "Electronic fee collection -- Compliance check communication for autonomous systems"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.12855" title="1.0.12855 12855 ">1.0.12855</a></td>
+            <td>12855</td>
+            <td>3</td>
+            <td>7</td>
+            <td>ISO 12855: Electronic fee collection -- Information exchange between service provision and toll charging</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.13141" title="1.0.13141 13141 ">1.0.13141</a></td>
+            <td>13141</td>
+            <td>1</td>
+            <td>1</td>
+            <td>ISO 13141 "Electronic fee collection -- Localisation augmentation communication for autonomous systems"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.13616" title="1.0.13616 iban ">1.0.13616</a></td>
+            <td>iban</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=41031">ISO 13616</a> "Financial services -- International Bank Account Number (IBAN)"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.13868" title="1.0.13868 pss1-name ">1.0.13868</a></td>
+            <td>pss1-name</td>
+            <td>2</td>
+            <td>2</td>
+            <td><a href="http://www.iso.org/iso/catalogue_detail?csnumber=36839">ISO/IEC 13868:2003</a>: Information technology -- Telecommunications and information exchange between systems -- Private Integrated…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.13869" title="1.0.13869 pss1-call-transfer ">1.0.13869</a></td>
+            <td>pss1-call-transfer</td>
+            <td>1</td>
+            <td>1</td>
+            <td>ISO 13869: Information technology -- Telecommunications and information exchange between systems -- Private Integrated Services…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.13873" title="1.0.13873 pss1-call-diversion ">1.0.13873</a></td>
+            <td>pss1-call-diversion</td>
+            <td>2</td>
+            <td>2</td>
+            <td>ISO/IEC 13873: Information technology -- Telecommunications and information exchange between systems -- Private Integrated Serv…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.13888" title="1.0.13888 non-repudiation ">1.0.13888</a></td>
+            <td>non-repudiation</td>
+            <td>2</td>
+            <td>2</td>
+            <td>ISO/IEC 13888</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.14813" title="1.0.14813 iso14813 ">1.0.14813</a></td>
+            <td>iso14813</td>
+            <td>1</td>
+            <td>2</td>
+            <td>ISO/TR 14813 "Transport Information and Control Systems (TICS) - Reference model architecture(s) for the TICS sector"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.14816" title="1.0.14816 iso14816 ">1.0.14816</a></td>
+            <td>iso14816</td>
+            <td>0</td>
+            <td>0</td>
+            <td>ASN.1 module named <code>AVIAEINumberingAndDataStructures</code></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.14888" title="1.0.14888 digital-signature-with-appendix ">1.0.14888</a></td>
+            <td>digital-signature-with-appendix</td>
+            <td>2</td>
+            <td>27</td>
+            <td>ISO/IEC 14888 "Information Technology (IT) security techniques -- Digital signatures with appendix"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.14906" title="1.0.14906 14906 ">1.0.14906</a></td>
+            <td>14906</td>
+            <td>2</td>
+            <td>8</td>
+            <td>ISO 14906: Road transport and traffic telematics -- Electronic fee collection -- Application interface definition for dedicated…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.15418" title="1.0.15418 15418 ">1.0.15418</a></td>
+            <td>15418</td>
+            <td>2</td>
+            <td>2</td>
+            <td>ISO/IEC 15418:2009 "Information technology -- Automatic identification and data capture techniques -- GS1 Application Identifie…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.15434" title="1.0.15434 iso15434 ">1.0.15434</a></td>
+            <td>iso15434</td>
+            <td>0</td>
+            <td>0</td>
+            <td>ISO/IEC 15434 'Transfer Syntax for High Capacity data carrier"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.15459" title="1.0.15459 iso15459 ">1.0.15459</a></td>
+            <td>iso15459</td>
+            <td>3</td>
+            <td>24</td>
+            <td>ISO/IEC 15459 "Information technology -- Unique identification of transport units"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.15628" title="1.0.15628 dsrc ">1.0.15628</a></td>
+            <td>dsrc</td>
+            <td>2</td>
+            <td>2</td>
+            <td>ISO 15628 "Road transport and traffic telematics -- Dedicated Short Range Communication (DSRC) -- DSRC application layer"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.15946" title="1.0.15946 elliptic-curves ">1.0.15946</a></td>
+            <td>elliptic-curves</td>
+            <td>2</td>
+            <td>2</td>
+            <td>ISO/IEC 15946 "Information technology -- Security techniques -- Cryptographic techniques based on elliptic curves"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.15961" title="1.0.15961 rfid-data-protocol ">1.0.15961</a></td>
+            <td>rfid-data-protocol</td>
+            <td>12</td>
+            <td>675</td>
+            <td>ISO/IEC 15961 "Information technology - Automatic identification and data capture - Radio frequency identification (RFID) for i…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.16785" title="1.0.16785 16785 ">1.0.16785</a></td>
+            <td>16785</td>
+            <td>1</td>
+            <td>40</td>
+            <td><a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=65675">ISO/TS 16785</a> "Electronic Fee Collection (EFC) -- Interface definition between 'Dedicated Short Range Communication (DSRC)-On-Bo…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.17090" title="1.0.17090 hcpki ">1.0.17090</a></td>
+            <td>hcpki</td>
+            <td>3</td>
+            <td>4</td>
+            <td>ISO 17090 "Health informatics -- Public key infrastructure"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.17575" title="1.0.17575 17575 ">1.0.17575</a></td>
+            <td>17575</td>
+            <td>3</td>
+            <td>7</td>
+            <td>ISO TS 17575: Road Transport and Traffic Telematics (RTTT) -- Electronic Fee Collection (EFC)</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.18014" title="1.0.18014 tss ">1.0.18014</a></td>
+            <td>tss</td>
+            <td>6</td>
+            <td>39</td>
+            <td>ISO/IEC 18014: Information technology -- Security techniques -- Time-stamping services</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.18031" title="1.0.18031 random-bit-generation ">1.0.18031</a></td>
+            <td>random-bit-generation</td>
+            <td>0</td>
+            <td>0</td>
+            <td>ISO/IEC 18031</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.18032" title="1.0.18032 prime-number-generation ">1.0.18032</a></td>
+            <td>prime-number-generation</td>
+            <td>0</td>
+            <td>0</td>
+            <td>ISO/IEC 18032 "Information technology -- Security techniques -- Prime number generation"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.18033" title="1.0.18033 encryption-algorithms ">1.0.18033</a></td>
+            <td>encryption-algorithms</td>
+            <td>4</td>
+            <td>68</td>
+            <td>ISO/IEC 18033: Information technology -- Security techniques -- Encryption algorithms</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.18370" title="1.0.18370 blind-digital-signatures-mechanisms ">1.0.18370</a></td>
+            <td>blind-digital-signatures-mechanisms</td>
+            <td>1</td>
+            <td>9</td>
+            <td>ISO/IEC 18370 "Information technology -- Security techniques -- Blind digital signatures"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.19592" title="1.0.19592 secret-sharing ">1.0.19592</a></td>
+            <td>secret-sharing</td>
+            <td>1</td>
+            <td>17</td>
+            <td>ISO/IEC 19592 "Information technology -- Security techniques -- Secret Sharing"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.19772" title="1.0.19772 authenticated-encryption ">1.0.19772</a></td>
+            <td>authenticated-encryption</td>
+            <td>2</td>
+            <td>9</td>
+            <td>ISO/IEC 19772: Information technology -- Security techniques -- Authenticated encryption</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.19785" title="1.0.19785 cbeff ">1.0.19785</a></td>
+            <td>cbeff</td>
+            <td>2</td>
+            <td>10</td>
+            <td>ISO/IEC 19785: Information Technology -- Common Biometric Exchange Formats Framework</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.19794" title="1.0.19794 19794 ">1.0.19794</a></td>
+            <td>19794</td>
+            <td>1</td>
+            <td>6</td>
+            <td>ISO/IEC 19794 series "Information technology -- Biometric data<br>
+interchange formats"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.20008" title="1.0.20008 anonymous-digital-signatures ">1.0.20008</a></td>
+            <td>anonymous-digital-signatures</td>
+            <td>1</td>
+            <td>11</td>
+            <td>ISO/IEC 20008 "Information technology -- Security<br>
+techniques -- Anonymous digital signature"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.20009" title="1.0.20009 anonymous-entity-authentication ">1.0.20009</a></td>
+            <td>anonymous-entity-authentication</td>
+            <td>2</td>
+            <td>36</td>
+            <td>ISO/IEC 20009 series "Information technology -- Security techniques -- Anonymous entity authentication"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.20022" title="1.0.20022 unifi ">1.0.20022</a></td>
+            <td>unifi</td>
+            <td>0</td>
+            <td>0</td>
+            <td><a href="http://www.iso20022.org">ISO 20022</a>: Universal Financial Industry message scheme</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.20248" title="1.0.20248 20248 ">1.0.20248</a></td>
+            <td>20248</td>
+            <td>0</td>
+            <td>0</td>
+            <td>ISO/IEC 20248 "Automatic identification and data capture techniques -- Data structures -- Digital Signature meta structure"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.20828" title="1.0.20828 scm-standard ">1.0.20828</a></td>
+            <td>scm-standard</td>
+            <td>4</td>
+            <td>4</td>
+            <td>ASN.1 module named <code>SecurityCertificateManagement</code></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.21000" title="1.0.21000 21000 ">1.0.21000</a></td>
+            <td>21000</td>
+            <td>1</td>
+            <td>1</td>
+            <td>ISO/IEC 21000 series "Information technology -- Multimedia framework (MPEG-21)"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.21091" title="1.0.21091 21091 ">1.0.21091</a></td>
+            <td>21091</td>
+            <td>2</td>
+            <td>68</td>
+            <td><a href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=51432">ISO 21091</a> "Health informatics -- Directory services for healthcare providers, subjects of care and other entities"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.21218" title="1.0.21218 calm-ll-sap ">1.0.21218</a></td>
+            <td>calm-ll-sap</td>
+            <td>1</td>
+            <td>1</td>
+            <td>ISO 21218 "Intelligent transport systems -- Communications Access for Land Mobiles (CALM) -- Medium service access points"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.22895" title="1.0.22895 css ">1.0.22895</a></td>
+            <td>css</td>
+            <td>3</td>
+            <td>11</td>
+            <td>ISO 22895: Financial services - Security - Cryptographic syntax scheme</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.24102" title="1.0.24102 calm-management ">1.0.24102</a></td>
+            <td>calm-management</td>
+            <td>1</td>
+            <td>1</td>
+            <td>ISO 24102 "Intelligent transport systems -- Communications Access for Land Mobiles (CALM) -- Management"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.24531" title="1.0.24531 24531 ">1.0.24531</a></td>
+            <td>24531</td>
+            <td>0</td>
+            <td>0</td>
+            <td>ISO 24531 "Intelligent Transport Systems (ITS) -- System architecture, taxonomy and terminology -- Using eXtensible Markup Lang…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.24727" title="1.0.24727 iso24727 ">1.0.24727</a></td>
+            <td>iso24727</td>
+            <td>2</td>
+            <td>29</td>
+            <td>ISO/IEC 24727: Identification cards -- Integrated circuit card programming interfaces</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.24753" title="1.0.24753 24753 ">1.0.24753</a></td>
+            <td>24753</td>
+            <td>2</td>
+            <td>34</td>
+            <td>ISO/IEC 24753:Information technology -- Radio frequency identification (RFID) for item management -- Application protocol: enco…</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.24761" title="1.0.24761 acbio ">1.0.24761</a></td>
+            <td>acbio</td>
+            <td>2</td>
+            <td>13</td>
+            <td>ISO/IEC 24761: Information technology -- Security techniques -- Authentication context for biometrics</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.29150" title="1.0.29150 signcryption ">1.0.29150</a></td>
+            <td>signcryption</td>
+            <td>2</td>
+            <td>8</td>
+            <td>ISO/IEC 29150: Information technology -- Security techniques -- Signcryption</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.29192" title="1.0.29192 lightweight-cryptography ">1.0.29192</a></td>
+            <td>lightweight-cryptography</td>
+            <td>4</td>
+            <td>39</td>
+            <td>ISO/IEC 29192-4: Information technology -- Security techniques -- Lightweight cryptography</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.62351" title="1.0.62351 62351 ">1.0.62351</a></td>
+            <td>62351</td>
+            <td>0</td>
+            <td>0</td>
+            <td>IEC 62351 "Power systems management and associated information exchange -- Data and communications security"</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.62379" title="1.0.62379 iec62379 ">1.0.62379</a></td>
+            <td>iec62379</td>
+            <td>1</td>
+            <td>108</td>
+            <td>IEC 62379: Common Control Interface</td>
+        </tr>
+    
+        <tr>
+            <td><a href="/1.0.62439" title="1.0.62439 62439 ">1.0.62439</a></td>
+            <td>62439</td>
+            <td>6</td>
+            <td>24</td>
+            <td>MIB module named <code>IEC-62439-3-MIB</code> which defines the Network Management interfaces for the redundancy protocols defined by the IE…</td>
+        </tr>
+    
+    
+    </table>
+
+
+
+
+</body>
 </html>

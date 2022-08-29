@@ -2,14 +2,29 @@
 
 # Requires Python 3.10 for match statement
 
+from typing import Dict
+
+import bs4 # Needed for bs4.element.Tag type in get_next_sibling_tag
 from bs4 import BeautifulSoup
 import requests
 import datetime
+from markdownify import markdownify
 
 BASE_URL = "https://oidref.com"
 TEST_URL = "https://oidref.com/1.0.3166"
 
-def scrape_description_list(soup):
+# ------------------ Utils ------------------
+
+def get_next_sibling_tag(tag):
+    while tag.next_sibling and type(tag.next_sibling) != bs4.element.Tag:
+        tag = tag.next_sibling
+
+    return tag.next_sibling
+
+
+# ------------------ Scrapers ------------------
+
+def scrape_description_list(soup: BeautifulSoup) -> Dict:
     data = {}
 
     description_list = soup.find("dl")
@@ -43,15 +58,43 @@ def scrape_description_list(soup):
     return data
 
 
-def main():
-    response = requests.get(BASE_URL + "/0")
-    # response = requests.get(TEST_URL)
+def scrape_detailed_data(soup: BeautifulSoup) -> Dict:
+    data = {}
+
+    headers = soup.find_all("h3")
+
+    for header in headers:
+        converted_header = (" ".join(list(header.stripped_strings))).lower().replace(" ", "_")
+        next_sibling_tag = get_next_sibling_tag(header)
+
+        if "registration_authority" in converted_header:
+            # TODO(Adin): !BEFORE INSERTING INTO DATABASE! Figure out what to do with unclosed registration authority paragraph tags
+            continue
+
+        if next_sibling_tag.name != "p":
+            # Handle headers for Children and Brothers tables
+            break
+
+        data[converted_header] = markdownify(str(next_sibling_tag)).strip()
+
+    return data
+
+
+def test(url):
+    response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
 
     data = scrape_description_list(soup)
-
+    detailed_data = scrape_detailed_data(soup)
+    data["detailed_data"] = detailed_data
+    print(url)
     print(data)
-    # pprint.pprint(data) 
+
+
+def main():
+    test(BASE_URL + "/0")
+    print("\n--------------------\n")
+    test(TEST_URL)
 
 
 if __name__ == "__main__":
