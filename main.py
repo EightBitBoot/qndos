@@ -148,20 +148,10 @@ def scrape_children(soup):
 
 MULTITHREAD_LIST = []
 
-MAX_NODES = 100
-num_nodes = 0
-
 mongodb_client = None
 MONGODB_URL = "friendlysqueeze.com"
 
 def traverse_tree(url: str):
-    global num_nodes
-
-    if num_nodes >= MAX_NODES:
-        return
-
-    num_nodes += 1
-
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
 
