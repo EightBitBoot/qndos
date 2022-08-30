@@ -10,6 +10,8 @@ import re
 from collections import namedtuple
 import json
 import os
+import concurrent.futures
+from math import floor
 
 import bs4 # Needed for bs4.element.Tag type in get_next_sibling_tag
 from bs4 import BeautifulSoup
@@ -67,7 +69,11 @@ def scrape_description_list(soup: BeautifulSoup) -> Dict:
             case "node_names" | "asn1_oid" | "iri_oid":
                 converted_desc = [str(name) for name in description_desc.stripped_strings]
             case "creation_date" | "modification_date":
-                converted_desc = datetime.datetime.strptime(str(description_desc.string).strip(), "%b. %d, %Y")
+                try:
+                    converted_desc = datetime.datetime.strptime(str(description_desc.string), "%b. %d, %Y")
+                except:
+                    # Handle inconsistent time formatting
+                    converted_desc = datetime.datetime.strptime(str(description_desc.string), "%B %d, %Y")
             case _:
                 converted_desc = str(description_desc.string).strip()
 
@@ -172,8 +178,13 @@ def traverse_tree(url: str):
     children = scrape_children(soup)
     
     if data["dot_oid"] in MULTITHREAD_LIST:
-        # TODO(Adin): Use multiprocessing here
-        pass
+        print(f"Multithreading on children of {data['dot_oid']}")
+        process_pool = concurrent.futures.ProcessPoolExecutor(max_workers=floor(3 / 4 * os.cpu_count()))
+        futures = []
+        for child in children:
+            futures.append(process_pool.submit(entrypoint, child.url))
+
+        concurrent.futures.wait(futures)
     else:
         for child in children:
             traverse_tree(child.url)
@@ -200,29 +211,7 @@ def entrypoint(url: str):
     traverse_tree(url)
 
 
-def test(url):
-    response = requests.get(url)
-    soup = BeautifulSoup(response.content, "html.parser")
-
-    print("\n".join([str(x) for x in scrape_children(soup)]))
-    return
-
-    data = scrape_description_list(soup)
-    detailed_data = scrape_detailed_data(soup)
-    data["detailed_data"] = detailed_data
-    print(url)
-    pprint.pprint(data, sort_dicts=False)
-
-
 def main():
-    # test(DETAILS_STRESS_TEST_URL)
-
-    # test(ZERO_URL)
-    # print("\n--------------------\n")
-    # test(GENERAL_TEST_URL)
-    # print("\n--------------------\n")
-    # test(NO_CHILDREN_URL)
-
     entrypoint(ZERO_URL)
 
 
