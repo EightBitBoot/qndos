@@ -4,16 +4,26 @@
 
 from typing import Dict
 
+import datetime
+import pprint
+import re
+from collections import namedtuple
+
 import bs4 # Needed for bs4.element.Tag type in get_next_sibling_tag
 from bs4 import BeautifulSoup
 import requests
-import datetime
 from markdownify import markdownify
 
-import pprint
-
 BASE_URL = "https://oidref.com"
-TEST_URL = "https://oidref.com/1.0.3166"
+
+# Testing URLs
+ZERO_URL = "https://oidref.com/0"
+GENERAL_TEST_URL = "https://oidref.com/1.0.3166"
+DETAILS_STRESS_TEST_URL = "https://oidref.com/1.0.8802.1.1.2.0.0.1"
+NO_CHILDREN_URL = "https://oidref.com/0.5"
+
+# Child object for child scraper
+Child = namedtuple("Child", ["url", "direct_children", "subnodes_total"])
 
 # ------------------ Utils ------------------
 
@@ -42,6 +52,9 @@ def scrape_description_list(soup: BeautifulSoup) -> Dict:
         converted_desc = None
         match converted_term:
             case "parent":
+                if not description_desc.a:
+                    continue
+
                 converted_desc = str(description_desc.a.string).strip()
                 if converted_desc == "None":
                     # Special case for root nodes
@@ -69,6 +82,9 @@ def scrape_detailed_data(soup: BeautifulSoup) -> Dict:
         converted_header = (" ".join(list(header.stripped_strings))).lower().replace(" ", "_")
         next_sibling_tag = get_next_sibling_tag(header)
 
+        if not next_sibling_tag:
+            continue
+
         if "recovered" in converted_header:
             # Ignore "recovered" sections
             continue
@@ -89,9 +105,41 @@ def scrape_detailed_data(soup: BeautifulSoup) -> Dict:
     return data
 
 
+def scrape_children(soup):
+    children = []    
+
+    children_header = soup.find(name="h3", string=re.compile("[cC]hildren"))
+
+    if not children_header:
+        return children
+
+    children_table = get_next_sibling_tag(children_header)
+
+    if not children_table:
+        return children
+
+    first = True
+    for table_row in children_table.find_all("tr"):
+        if first:
+            # Skip first without enumerating
+            first = False
+            continue
+
+        table_cells = table_row.find_all("td")
+        children.append(Child(
+            url=f"{BASE_URL}/{table_cells[0].a.string}",
+            direct_children=int(table_cells[2].string),
+            subnodes_total=int(table_cells[3].string)
+        ))
+
+    return children
+
 def test(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
+
+    print("\n".join([str(x) for x in scrape_children(soup)]))
+    return
 
     data = scrape_description_list(soup)
     detailed_data = scrape_detailed_data(soup)
@@ -101,9 +149,13 @@ def test(url):
 
 
 def main():
-    test(BASE_URL + "/0")
+    # test(DETAILS_STRESS_TEST_URL)
+
+    test(ZERO_URL)
     print("\n--------------------\n")
-    test(TEST_URL)
+    test(GENERAL_TEST_URL)
+    print("\n--------------------\n")
+    test(NO_CHILDREN_URL)
 
 
 if __name__ == "__main__":
