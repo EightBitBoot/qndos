@@ -10,6 +10,8 @@ import requests
 import datetime
 from markdownify import markdownify
 
+import pprint
+
 BASE_URL = "https://oidref.com"
 TEST_URL = "https://oidref.com/1.0.3166"
 
@@ -67,11 +69,18 @@ def scrape_detailed_data(soup: BeautifulSoup) -> Dict:
         converted_header = (" ".join(list(header.stripped_strings))).lower().replace(" ", "_")
         next_sibling_tag = get_next_sibling_tag(header)
 
-        if "registration_authority" in converted_header:
-            # TODO(Adin): !BEFORE INSERTING INTO DATABASE! Figure out what to do with unclosed registration authority paragraph tags
+        if "recovered" in converted_header:
+            # Ignore "recovered" sections
             continue
 
-        if next_sibling_tag.name != "p":
+        if "registration_authority" in converted_header:
+            # Handle unclosed paragraph tags
+            html_str = str(next_sibling_tag)
+            split_str = html_str.split("<h3>")
+            data[converted_header] = markdownify(split_str[0].strip()).strip()
+            continue
+
+        if next_sibling_tag.name != "p" and next_sibling_tag.name != "pre":
             # Handle headers for Children and Brothers tables
             break
 
@@ -88,7 +97,7 @@ def test(url):
     detailed_data = scrape_detailed_data(soup)
     data["detailed_data"] = detailed_data
     print(url)
-    print(data)
+    pprint.pprint(data, sort_dicts=False)
 
 
 def main():
