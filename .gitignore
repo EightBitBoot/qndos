@@ -1,2 +1,5 @@
 # Venv
 venv/
+
+# Secrets File
+secrets.json

@@ -8,11 +8,14 @@ import datetime
 import pprint
 import re
 from collections import namedtuple
+import json
+import os
 
 import bs4 # Needed for bs4.element.Tag type in get_next_sibling_tag
 from bs4 import BeautifulSoup
 import requests
 from markdownify import markdownify
+from pymongo import MongoClient
 
 BASE_URL = "https://oidref.com"
 
@@ -142,7 +145,10 @@ MULTITHREAD_LIST = []
 MAX_NODES = 100
 num_nodes = 0
 
-def traverse_tree(url):
+mongodb_client = None
+MONGODB_URL = "friendlysqueeze.com"
+
+def traverse_tree(url: str):
     global num_nodes
 
     if num_nodes >= MAX_NODES:
@@ -156,8 +162,12 @@ def traverse_tree(url):
     data = scrape_description_list(soup)
     data["detailed_data"] = scrape_detailed_data(soup)
 
-    print(data["dot_oid"])
-    # TODO(Adin): Store in mongodb here
+    mongodb_collection = mongodb_client.qndos.oids
+    if mongodb_collection.find_one({"dot_oid": data["dot_oid"]}):
+        print(f"Warning: oid {data['dot_oid']} is already in the database. Skipping")
+    else:
+        mongodb_collection.insert_one(data)
+        print(data["dot_oid"])
 
     children = scrape_children(soup)
     
@@ -168,6 +178,27 @@ def traverse_tree(url):
         for child in children:
             traverse_tree(child.url)
     
+
+def entrypoint(url: str):
+    global mongodb_client
+
+    mongodb_client = None
+
+    if not os.path.exists("secrets.json"):
+        print("secrets.json file not found! Create a json file with four keys: mongo_database, mongo_username, mongo_database, mongo_passwd")
+
+    with open("secrets.json", "rt") as secrets_file:
+        secrets = json.load(secrets_file)    
+        mongodb_client = MongoClient(
+            secrets["mongo_url"],
+            username=secrets["mongo_username"],
+            password=secrets["mongo_passwd"],
+            authSource=secrets["mongo_database"],
+            authMechanism="SCRAM-SHA-1"
+        )
+
+    traverse_tree(url)
+
 
 def test(url):
     response = requests.get(url)
@@ -192,7 +223,7 @@ def main():
     # print("\n--------------------\n")
     # test(NO_CHILDREN_URL)
 
-    traverse_tree(ZERO_URL)
+    entrypoint(ZERO_URL)
 
 
 if __name__ == "__main__":
