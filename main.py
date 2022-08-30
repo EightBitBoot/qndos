@@ -134,6 +134,41 @@ def scrape_children(soup):
 
     return children
 
+
+# ------------------ Traverser ------------------
+
+MULTITHREAD_LIST = []
+
+MAX_NODES = 100
+num_nodes = 0
+
+def traverse_tree(url):
+    global num_nodes
+
+    if num_nodes >= MAX_NODES:
+        return
+
+    num_nodes += 1
+
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    data = scrape_description_list(soup)
+    data["detailed_data"] = scrape_detailed_data(soup)
+
+    print(data["dot_oid"])
+    # TODO(Adin): Store in mongodb here
+
+    children = scrape_children(soup)
+    
+    if data["dot_oid"] in MULTITHREAD_LIST:
+        # TODO(Adin): Use multiprocessing here
+        pass
+    else:
+        for child in children:
+            traverse_tree(child.url)
+    
+
 def test(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
@@ -151,11 +186,13 @@ def test(url):
 def main():
     # test(DETAILS_STRESS_TEST_URL)
 
-    test(ZERO_URL)
-    print("\n--------------------\n")
-    test(GENERAL_TEST_URL)
-    print("\n--------------------\n")
-    test(NO_CHILDREN_URL)
+    # test(ZERO_URL)
+    # print("\n--------------------\n")
+    # test(GENERAL_TEST_URL)
+    # print("\n--------------------\n")
+    # test(NO_CHILDREN_URL)
+
+    traverse_tree(ZERO_URL)
 
 
 if __name__ == "__main__":
