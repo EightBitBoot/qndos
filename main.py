@@ -12,6 +12,7 @@ import json
 import os
 import concurrent.futures
 from math import floor
+import time
 
 import bs4 # Needed for bs4.element.Tag type in get_next_sibling_tag
 from bs4 import BeautifulSoup
@@ -155,7 +156,8 @@ def traverse_tree(url: str):
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
 
-    data = scrape_description_list(soup)
+    data = {"scrape_time": time.time_ns()}
+    data.update(scrape_description_list(soup))
     data["detailed_data"] = scrape_detailed_data(soup)
 
     mongodb_collection = mongodb_client.qndos.oids
@@ -202,7 +204,15 @@ def entrypoint(url: str):
 
 
 def main():
+    local_timezone = datetime.datetime.now(datetime.timezone.utc).astimezone().tzinfo
+    run_date = datetime.datetime.now(local_timezone)
+
+    then = time.perf_counter_ns()
     entrypoint(ZERO_URL)
+    now = time.perf_counter_ns()
+
+    with open(f"{run_date.strftime('%Y.%m.%d_%H:%M:%S')}_runtime.txt", "w+t") as time_file:
+        time_file.write(str(now - then))
 
 
 if __name__ == "__main__":

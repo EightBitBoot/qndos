@@ -3,3 +3,6 @@ venv/
 
 # Secrets File
 secrets.json
+
+# Runtime Timing Files
+*_runtime.txt
