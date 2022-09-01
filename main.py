@@ -2,7 +2,7 @@
 
 # Requires Python 3.10 for match statement
 
-from typing import Dict
+from typing import Dict, List
 
 import datetime
 import re
@@ -13,6 +13,7 @@ import concurrent.futures
 from math import floor
 import time
 import pprint
+import sys
 
 import bs4 # Needed for bs4.element.Tag type in get_next_sibling_tag
 from bs4 import BeautifulSoup
@@ -143,14 +144,9 @@ def scrape_children(soup):
     return children
 
 
-# ------------------ Traverser ------------------
+# ------------------ Processor ------------------
 
-MULTITHREAD_LIST = []
-
-mongodb_client = None
-MONGODB_URL = "friendlysqueeze.com"
-
-def traverse_tree(url: str):
+def process_one(url: str, use_mongo: bool = True) -> List[Child]:
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
 
@@ -158,15 +154,39 @@ def traverse_tree(url: str):
     data.update(scrape_description_list(soup))
     data["detailed_data"] = scrape_detailed_data(soup)
 
-    mongodb_collection = mongodb_client.qndos.oids
-    if mongodb_collection.find_one({"dot_oid": data["dot_oid"]}):
-        print(f"Warning: oid {data['dot_oid']} is already in the database. Skipping", flush=True)
-    else:
-        mongodb_collection.insert_one(data)
-        print(data["dot_oid"], flush=True)
-
     children = scrape_children(soup)
+
+    if use_mongo:
+        mongodb_collection = mongodb_client.qndos.oids
+        if mongodb_collection.find_one({"dot_oid": data["dot_oid"]}):
+            print(f"Warning: oid {data['dot_oid']} is already in the database. Skipping", flush=True)
+        else:
+            mongodb_collection.insert_one(data)
+            print(data["dot_oid"], flush=True)
+
+    return data,children
+
+
+# ------------------ Traverser ------------------
+
+MULTITHREAD_LIST = []
+DRILL_DOWN_OID = ["0", "0.4", "0.4.0", "0.4.0.127", "0.4.0.127.0", "0.4.0.127.0.10"]
+traversal_started = False
+
+mongodb_client = None
+MONGODB_URL = "friendlysqueeze.com"
+
+def traverse_tree(url: str):
+    global traversal_started
+
+    data,children = process_one(url)
     
+    print(data["dot_oid"])
+
+    if data["dot_oid"] == DRILL_DOWN_OID[-1]:
+        traversal_started = True
+        print("Found start")
+
     if data["dot_oid"] in MULTITHREAD_LIST:
         print(f"Multithreading on children of {data['dot_oid']}", flush=True)
         process_pool = concurrent.futures.ProcessPoolExecutor(max_workers=floor(3 / 4 * os.cpu_count()))
@@ -177,6 +197,9 @@ def traverse_tree(url: str):
         concurrent.futures.wait(futures)
     else:
         for child in children:
+            if not traversal_started and child.url.split("/")[-1] not in DRILL_DOWN_OID:
+                continue
+
             traverse_tree(child.url)
     
 
