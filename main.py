@@ -180,8 +180,6 @@ def traverse_tree(url: str):
     global traversal_started
 
     data,children = process_one(url)
-    
-    print(data["dot_oid"])
 
     if data["dot_oid"] == DRILL_DOWN_OID[-1]:
         traversal_started = True
