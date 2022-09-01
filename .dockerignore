@@ -1,0 +1,7 @@
+
+# Everything
+**/*
+
+# Include Just main.py and requirements.txt
+!main.py
+!requirements.txt
