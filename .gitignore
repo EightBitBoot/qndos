@@ -5,4 +5,7 @@ venv/
 secrets.json
 
 # Runtime Timing Files
-*_runtime.txt
+runtimes/
+
+# macOS files
+**/.DS_Store

@@ -160,15 +160,15 @@ def traverse_tree(url: str):
 
     mongodb_collection = mongodb_client.qndos.oids
     if mongodb_collection.find_one({"dot_oid": data["dot_oid"]}):
-        print(f"Warning: oid {data['dot_oid']} is already in the database. Skipping")
+        print(f"Warning: oid {data['dot_oid']} is already in the database. Skipping", flush=True)
     else:
         mongodb_collection.insert_one(data)
-        print(data["dot_oid"])
+        print(data["dot_oid"], flush=True)
 
     children = scrape_children(soup)
     
     if data["dot_oid"] in MULTITHREAD_LIST:
-        print(f"Multithreading on children of {data['dot_oid']}")
+        print(f"Multithreading on children of {data['dot_oid']}", flush=True)
         process_pool = concurrent.futures.ProcessPoolExecutor(max_workers=floor(3 / 4 * os.cpu_count()))
         futures = []
         for child in children:
@@ -205,12 +205,23 @@ def main():
     local_timezone = datetime.datetime.now(datetime.timezone.utc).astimezone().tzinfo
     run_date = datetime.datetime.now(local_timezone)
 
-    then = time.perf_counter_ns()
-    entrypoint(ZERO_URL)
-    now = time.perf_counter_ns()
+    if not os.path.exists("runtimes"):
+        os.mkdir("runtimes")
 
-    with open(f"{run_date.strftime('%Y.%m.%d_%H:%M:%S')}_runtime.txt", "w+t") as time_file:
-        time_file.write(str(now - then))
+    runtime_file_url = f"runtimes/{run_date.strftime('%Y.%m.%d_%H:%M:%S')}_runtime.txt"
+
+    then = time.time_ns()
+
+    with open(runtime_file_url, "w+t") as runtime_file:
+        runtime_file.write(f"Start: {str(then)}\n")
+
+    entrypoint(ZERO_URL)
+
+    now = time.time_ns()
+
+    with open(runtime_file_url, "a+t") as time_file:
+        time_file.write(f"End: {str(now)}\n")
+        time_file.write(f"Runtime: {str(now - then)}\n")
 
 
 if __name__ == "__main__":
