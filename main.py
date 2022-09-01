@@ -5,7 +5,6 @@
 from typing import Dict
 
 import datetime
-import pprint
 import re
 from collections import namedtuple
 import json
@@ -13,12 +12,14 @@ import os
 import concurrent.futures
 from math import floor
 import time
+import pprint
 
 import bs4 # Needed for bs4.element.Tag type in get_next_sibling_tag
 from bs4 import BeautifulSoup
 import requests
 from markdownify import markdownify
 from pymongo import MongoClient
+import dateparser
 
 BASE_URL = "https://oidref.com"
 
@@ -70,11 +71,8 @@ def scrape_description_list(soup: BeautifulSoup) -> Dict:
             case "node_names" | "asn1_oid" | "iri_oid":
                 converted_desc = [str(name) for name in description_desc.stripped_strings]
             case "creation_date" | "modification_date":
-                try:
-                    converted_desc = datetime.datetime.strptime(str(description_desc.string), "%b. %d, %Y")
-                except:
-                    # Handle inconsistent time formatting
-                    converted_desc = datetime.datetime.strptime(str(description_desc.string), "%B %d, %Y")
+                # {"TIMEZONE": "UTC"} avoids a PytzUsageWarning
+                converted_desc = dateparser.parse(str(description_desc.string), settings={"TIMEZONE": "UTC"})
             case _:
                 converted_desc = str(description_desc.string).strip()
 
