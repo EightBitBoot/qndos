@@ -70,7 +70,13 @@ def scrape_description_list(soup: BeautifulSoup) -> Dict:
                     # Special case for root nodes
                     converted_desc = None
             case "node_code":
-                converted_desc = int(description_desc.string)
+                try:
+                    converted_desc = int(description_desc.string)
+                except:
+                    if str(description_desc.string).strip() == "None":
+                        converted_desc = None
+                    else:
+                        converted_desc = str(description_desc.string).strip()
             case "node_names" | "asn1_oid" | "iri_oid":
                 converted_desc = [str(name) for name in description_desc.stripped_strings]
             case "creation_date" | "modification_date":
