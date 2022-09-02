@@ -13,6 +13,7 @@ import concurrent.futures
 from math import floor
 import time
 import pprint
+import sys
 
 import bs4 # Needed for bs4.element.Tag type in get_next_sibling_tag
 from bs4 import BeautifulSoup
@@ -22,9 +23,11 @@ from pymongo import MongoClient
 import dateparser
 
 BASE_URL = "https://oidref.com"
+ZERO_URL = "https://oidref.com/0"
+ONE_URL = "https://oidref.com/1"
+TWO_URL = "https://oidref.com/2"
 
 # Testing URLs
-ZERO_URL = "https://oidref.com/0"
 GENERAL_TEST_URL = "https://oidref.com/1.0.3166"
 DETAILS_STRESS_TEST_URL = "https://oidref.com/1.0.8802.1.1.2.0.0.1"
 NO_CHILDREN_URL = "https://oidref.com/0.5"
@@ -205,6 +208,9 @@ def main():
     local_timezone = datetime.datetime.now(datetime.timezone.utc).astimezone().tzinfo
     run_date = datetime.datetime.now(local_timezone)
 
+    # Avoid max recursion crashes
+    sys.setrecursionlimit(10**6)
+
     if not os.path.exists("runtimes"):
         os.mkdir("runtimes")
 
@@ -215,7 +221,7 @@ def main():
     with open(runtime_file_url, "w+t") as runtime_file:
         runtime_file.write(f"Start: {str(then)}\n")
 
-    entrypoint(ZERO_URL)
+    entrypoint(TWO_URL)
 
     now = time.time_ns()
 
