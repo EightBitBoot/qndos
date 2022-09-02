@@ -23,9 +23,11 @@ from pymongo import MongoClient
 import dateparser
 
 BASE_URL = "https://oidref.com"
+ZERO_URL = "https://oidref.com/0"
+ONE_URL = "https://oidref.com/1"
+TWO_URL = "https://oidref.com/2"
 
 # Testing URLs
-ZERO_URL = "https://oidref.com/0"
 GENERAL_TEST_URL = "https://oidref.com/1.0.3166"
 DETAILS_STRESS_TEST_URL = "https://oidref.com/1.0.8802.1.1.2.0.0.1"
 NO_CHILDREN_URL = "https://oidref.com/0.5"
@@ -68,7 +70,13 @@ def scrape_description_list(soup: BeautifulSoup) -> Dict:
                     # Special case for root nodes
                     converted_desc = None
             case "node_code":
-                converted_desc = int(description_desc.string)
+                try:
+                    converted_desc = int(description_desc.string)
+                except:
+                    if str(description_desc.string).strip() == "None":
+                        converted_desc = None
+                    else:
+                        converted_desc = str(description_desc.string).strip()
             case "node_names" | "asn1_oid" | "iri_oid":
                 converted_desc = [str(name) for name in description_desc.stripped_strings]
             case "creation_date" | "modification_date":
@@ -226,6 +234,9 @@ def main():
     local_timezone = datetime.datetime.now(datetime.timezone.utc).astimezone().tzinfo
     run_date = datetime.datetime.now(local_timezone)
 
+    # Avoid max recursion crashes
+    sys.setrecursionlimit(10**6)
+
     if not os.path.exists("runtimes"):
         os.mkdir("runtimes")
 
@@ -236,7 +247,7 @@ def main():
     with open(runtime_file_url, "w+t") as runtime_file:
         runtime_file.write(f"Start: {str(then)}\n")
 
-    entrypoint(ZERO_URL)
+    entrypoint(TWO_URL)
 
     now = time.time_ns()
 
