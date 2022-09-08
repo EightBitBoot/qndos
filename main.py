@@ -155,6 +155,7 @@ def scrape_children(soup):
 # ------------------ Traverser ------------------
 
 MULTITHREAD_LIST = []
+SKIP_URLS = ["https://oidref.com/1.3.6.1.4.1"]
 
 mongodb_client = None
 MONGODB_URL = "friendlysqueeze.com"
@@ -181,11 +182,15 @@ def traverse_tree(url: str):
         process_pool = concurrent.futures.ProcessPoolExecutor(max_workers=floor(3 / 4 * os.cpu_count()))
         futures = []
         for child in children:
+            if child.url in SKIP_URLS:
+                continue
             futures.append(process_pool.submit(entrypoint, child.url))
 
         concurrent.futures.wait(futures)
     else:
         for child in children:
+            if child.url in SKIP_URLS:
+                continue
             traverse_tree(child.url)
     
 
