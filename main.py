@@ -154,6 +154,9 @@ def scrape_children(soup):
 
 # ------------------ Processor ------------------
 
+mongodb_client = None
+MONGODB_URL = "friendlysqueeze.com"
+
 def process_one(url: str, use_mongo: bool = True) -> List[Child]:
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
@@ -178,11 +181,12 @@ def process_one(url: str, use_mongo: bool = True) -> List[Child]:
 # ------------------ Traverser ------------------
 
 MULTITHREAD_LIST = []
+SKIP_URLS = ["https://oidref.com/1.3.6.1.4.1"]
+
 DRILL_DOWN_OID = ["0", "0.4", "0.4.0", "0.4.0.127", "0.4.0.127.0", "0.4.0.127.0.10"]
 traversal_started = False
 
 mongodb_client = None
-MONGODB_URL = "friendlysqueeze.com"
 
 def traverse_tree(url: str):
     global traversal_started
@@ -198,12 +202,18 @@ def traverse_tree(url: str):
         process_pool = concurrent.futures.ProcessPoolExecutor(max_workers=floor(3 / 4 * os.cpu_count()))
         futures = []
         for child in children:
+            if child.url in SKIP_URLS:
+                continue
+
             futures.append(process_pool.submit(entrypoint, child.url))
 
         concurrent.futures.wait(futures)
     else:
         for child in children:
             if not traversal_started and child.url.split("/")[-1] not in DRILL_DOWN_OID:
+                continue
+
+            if child.url in SKIP_URLS:
                 continue
 
             traverse_tree(child.url)
@@ -247,7 +257,7 @@ def main():
     with open(runtime_file_url, "w+t") as runtime_file:
         runtime_file.write(f"Start: {str(then)}\n")
 
-    entrypoint(TWO_URL)
+    entrypoint(ONE_URL)
 
     now = time.time_ns()
 

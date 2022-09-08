@@ -1,0 +1,1843 @@
+[
+    {
+        "identifier": "1.3.6.1.4.1.9",
+        "link": "https://oidref.com/1.3.6.1.4.1.9",
+        "names": [
+            "cisco"
+        ],
+        "sub_children": 22,
+        "sub_nodes_total": 94819
+    },
+    {
+        "identifier": "1.3.6.1.4.1.562",
+        "link": "https://oidref.com/1.3.6.1.4.1.562",
+        "names": [
+            "nortel",
+            "northernTelecom",
+            "nt"
+        ],
+        "sub_children": 9,
+        "sub_nodes_total": 51771
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2356",
+        "link": "https://oidref.com/1.3.6.1.4.1.2356",
+        "names": [
+            "ELSA",
+            "lancom-systems"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 29026
+    },
+    {
+        "identifier": "1.3.6.1.4.1.11",
+        "link": "https://oidref.com/1.3.6.1.4.1.11",
+        "names": [
+            "hp",
+            "IMPORTS"
+        ],
+        "sub_children": 46,
+        "sub_nodes_total": 23544
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2011",
+        "link": "https://oidref.com/1.3.6.1.4.1.2011",
+        "names": [
+            "huawei",
+            "iMAP"
+        ],
+        "sub_children": 11,
+        "sub_nodes_total": 20730
+    },
+    {
+        "identifier": "1.3.6.1.4.1.18",
+        "link": "https://oidref.com/1.3.6.1.4.1.18",
+        "names": [
+            "wellfleet"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 19013
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2",
+        "link": "https://oidref.com/1.3.6.1.4.1.2",
+        "names": [
+            "ibm"
+        ],
+        "sub_children": 8,
+        "sub_nodes_total": 17290
+    },
+    {
+        "identifier": "1.3.6.1.4.1.52",
+        "link": "https://oidref.com/1.3.6.1.4.1.52",
+        "names": [
+            "cabletron",
+            "IMPORTS"
+        ],
+        "sub_children": 457,
+        "sub_nodes_total": 14632
+    },
+    {
+        "identifier": "1.3.6.1.4.1.388",
+        "link": "https://oidref.com/1.3.6.1.4.1.388",
+        "names": [
+            "symbol"
+        ],
+        "sub_children": 17,
+        "sub_nodes_total": 11578
+    },
+    {
+        "identifier": "1.3.6.1.4.1.326",
+        "link": "https://oidref.com/1.3.6.1.4.1.326",
+        "names": [
+            "fore",
+            "marconi"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 11112
+    },
+    {
+        "identifier": "1.3.6.1.4.1.4874",
+        "link": "https://oidref.com/1.3.6.1.4.1.4874",
+        "names": [
+            "juniperUni",
+            "unisphere"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 10774
+    },
+    {
+        "identifier": "1.3.6.1.4.1.429",
+        "link": "https://oidref.com/1.3.6.1.4.1.429",
+        "names": [
+            "csg3Com",
+            "usr",
+            "usRobotics"
+        ],
+        "sub_children": 7,
+        "sub_nodes_total": 10133
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2272",
+        "link": "https://oidref.com/1.3.6.1.4.1.2272",
+        "names": [
+            "rapidCity"
+        ],
+        "sub_children": 42,
+        "sub_nodes_total": 9921
+    },
+    {
+        "identifier": "1.3.6.1.4.1.664",
+        "link": "https://oidref.com/1.3.6.1.4.1.664",
+        "names": [
+            "adtran"
+        ],
+        "sub_children": 8,
+        "sub_nodes_total": 9826
+    },
+    {
+        "identifier": "1.3.6.1.4.1.1751",
+        "link": "https://oidref.com/1.3.6.1.4.1.1751",
+        "names": [
+            "lucent"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 9315
+    },
+    {
+        "identifier": "1.3.6.1.4.1.6486",
+        "link": "https://oidref.com/1.3.6.1.4.1.6486",
+        "names": [
+            "alcatel"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 9053
+    },
+    {
+        "identifier": "1.3.6.1.4.1.318",
+        "link": "https://oidref.com/1.3.6.1.4.1.318",
+        "names": [
+            "apc"
+        ],
+        "sub_children": 692,
+        "sub_nodes_total": 8429
+    },
+    {
+        "identifier": "1.3.6.1.4.1.232",
+        "link": "https://oidref.com/1.3.6.1.4.1.232",
+        "names": [
+            "compaq",
+            "hp"
+        ],
+        "sub_children": 1584,
+        "sub_nodes_total": 8314
+    },
+    {
+        "identifier": "1.3.6.1.4.1.43",
+        "link": "https://oidref.com/1.3.6.1.4.1.43",
+        "names": [
+            "a3Com"
+        ],
+        "sub_children": 55,
+        "sub_nodes_total": 7751
+    },
+    {
+        "identifier": "1.3.6.1.4.1.449",
+        "link": "https://oidref.com/1.3.6.1.4.1.449",
+        "names": [
+            "codex"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 7711
+    },
+    {
+        "identifier": "1.3.6.1.4.1.3375",
+        "link": "https://oidref.com/1.3.6.1.4.1.3375",
+        "names": [
+            "f5"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 7642
+    },
+    {
+        "identifier": "1.3.6.1.4.1.191",
+        "link": "https://oidref.com/1.3.6.1.4.1.191",
+        "names": [
+            "ncr"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 7576
+    },
+    {
+        "identifier": "1.3.6.1.4.1.343",
+        "link": "https://oidref.com/1.3.6.1.4.1.343",
+        "names": [
+            "intel",
+            "intelRmm2"
+        ],
+        "sub_children": 8,
+        "sub_nodes_total": 7573
+    },
+    {
+        "identifier": "1.3.6.1.4.1.529",
+        "link": "https://oidref.com/1.3.6.1.4.1.529",
+        "names": [
+            "ascend"
+        ],
+        "sub_children": 47,
+        "sub_nodes_total": 7164
+    },
+    {
+        "identifier": "1.3.6.1.4.1.45",
+        "link": "https://oidref.com/1.3.6.1.4.1.45",
+        "names": [
+            "synoptics"
+        ],
+        "sub_children": 7,
+        "sub_nodes_total": 7101
+    },
+    {
+        "identifier": "1.3.6.1.4.1.351",
+        "link": "https://oidref.com/1.3.6.1.4.1.351",
+        "names": [
+            "stratacom"
+        ],
+        "sub_children": 13,
+        "sub_nodes_total": 7047
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2636",
+        "link": "https://oidref.com/1.3.6.1.4.1.2636",
+        "names": [
+            "juniperMIB"
+        ],
+        "sub_children": 10,
+        "sub_nodes_total": 7026
+    },
+    {
+        "identifier": "1.3.6.1.4.1.164",
+        "link": "https://oidref.com/1.3.6.1.4.1.164",
+        "names": [
+            "rad"
+        ],
+        "sub_children": 12,
+        "sub_nodes_total": 7008
+    },
+    {
+        "identifier": "1.3.6.1.4.1.231",
+        "link": "https://oidref.com/1.3.6.1.4.1.231",
+        "names": [
+            "sni"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 6833
+    },
+    {
+        "identifier": "1.3.6.1.4.1.5",
+        "link": "https://oidref.com/1.3.6.1.4.1.5",
+        "names": [
+            "acc"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 6695
+    },
+    {
+        "identifier": "1.3.6.1.4.1.6527",
+        "link": "https://oidref.com/1.3.6.1.4.1.6527",
+        "names": [
+            "timetra"
+        ],
+        "sub_children": 5,
+        "sub_nodes_total": 5871
+    },
+    {
+        "identifier": "1.3.6.1.4.1.33",
+        "link": "https://oidref.com/1.3.6.1.4.1.33",
+        "names": [
+            "xyplex",
+            "mrvInReachProductDivision",
+            "iTouch"
+        ],
+        "sub_children": 977,
+        "sub_nodes_total": 5723
+    },
+    {
+        "identifier": "1.3.6.1.4.1.485",
+        "link": "https://oidref.com/1.3.6.1.4.1.485",
+        "names": [
+            "sync",
+            "syncResearch"
+        ],
+        "sub_children": 40,
+        "sub_nodes_total": 5684
+    },
+    {
+        "identifier": "1.3.6.1.4.1.1872",
+        "link": "https://oidref.com/1.3.6.1.4.1.1872",
+        "names": [
+            "alteon"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 5483
+    },
+    {
+        "identifier": "1.3.6.1.4.1.674",
+        "link": "https://oidref.com/1.3.6.1.4.1.674",
+        "names": [
+            "dell"
+        ],
+        "sub_children": 8,
+        "sub_nodes_total": 5470
+    },
+    {
+        "identifier": "1.3.6.1.4.1.800",
+        "link": "https://oidref.com/1.3.6.1.4.1.800",
+        "names": [
+            "xylan"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 5374
+    },
+    {
+        "identifier": "1.3.6.1.4.1.23",
+        "link": "https://oidref.com/1.3.6.1.4.1.23",
+        "names": [
+            "novell",
+            "novellMib",
+            "Excelan"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 5078
+    },
+    {
+        "identifier": "1.3.6.1.4.1.140",
+        "link": "https://oidref.com/1.3.6.1.4.1.140",
+        "names": [
+            "bea"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 4866
+    },
+    {
+        "identifier": "1.3.6.1.4.1.1991",
+        "link": "https://oidref.com/1.3.6.1.4.1.1991",
+        "names": [
+            "foundry"
+        ],
+        "sub_children": 79,
+        "sub_nodes_total": 4652
+    },
+    {
+        "identifier": "1.3.6.1.4.1.6889",
+        "link": "https://oidref.com/1.3.6.1.4.1.6889",
+        "names": [
+            "avaya"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 4626
+    },
+    {
+        "identifier": "1.3.6.1.4.1.866",
+        "link": "https://oidref.com/1.3.6.1.4.1.866",
+        "names": [
+            "pce"
+        ],
+        "sub_children": 16,
+        "sub_nodes_total": 4625
+    },
+    {
+        "identifier": "1.3.6.1.4.1.1795",
+        "link": "https://oidref.com/1.3.6.1.4.1.1795",
+        "names": [
+            "pdyn",
+            "thenewpdn"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 4611
+    },
+    {
+        "identifier": "1.3.6.1.4.1.36",
+        "link": "https://oidref.com/1.3.6.1.4.1.36",
+        "names": [
+            "dec"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 4519
+    },
+    {
+        "identifier": "1.3.6.1.4.1.498",
+        "link": "https://oidref.com/1.3.6.1.4.1.498",
+        "names": [
+            "gdc"
+        ],
+        "sub_children": 13,
+        "sub_nodes_total": 4252
+    },
+    {
+        "identifier": "1.3.6.1.4.1.789",
+        "link": "https://oidref.com/1.3.6.1.4.1.789",
+        "names": [
+            "netapp"
+        ],
+        "sub_children": 5,
+        "sub_nodes_total": 4250
+    },
+    {
+        "identifier": "1.3.6.1.4.1.335",
+        "link": "https://oidref.com/1.3.6.1.4.1.335",
+        "names": [
+            "micom"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 4220
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2637",
+        "link": "https://oidref.com/1.3.6.1.4.1.2637",
+        "names": [
+            "aptis"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 4128
+    },
+    {
+        "identifier": "1.3.6.1.4.1.42",
+        "link": "https://oidref.com/1.3.6.1.4.1.42",
+        "names": [
+            "sun",
+            "sunMIB"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 4092
+    },
+    {
+        "identifier": "1.3.6.1.4.1.890",
+        "link": "https://oidref.com/1.3.6.1.4.1.890",
+        "names": [
+            "ZyXEL"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 4017
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2879",
+        "link": "https://oidref.com/1.3.6.1.4.1.2879",
+        "names": [
+            "sonus"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 4006
+    },
+    {
+        "identifier": "1.3.6.1.4.1.3085",
+        "link": "https://oidref.com/1.3.6.1.4.1.3085",
+        "names": [
+            "csRoot"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 3721
+    },
+    {
+        "identifier": "1.3.6.1.4.1.495",
+        "link": "https://oidref.com/1.3.6.1.4.1.495",
+        "names": [
+            "495"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 3688
+    },
+    {
+        "identifier": "1.3.6.1.4.1.637",
+        "link": "https://oidref.com/1.3.6.1.4.1.637",
+        "names": [
+            "alcatel"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 3575
+    },
+    {
+        "identifier": "1.3.6.1.4.1.6431",
+        "link": "https://oidref.com/1.3.6.1.4.1.6431",
+        "names": [
+            "broadsoft"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 3546
+    },
+    {
+        "identifier": "1.3.6.1.4.1.12740",
+        "link": "https://oidref.com/1.3.6.1.4.1.12740",
+        "names": [
+            "equalLogic"
+        ],
+        "sub_children": 24,
+        "sub_nodes_total": 3475
+    },
+    {
+        "identifier": "1.3.6.1.4.1.4491",
+        "link": "https://oidref.com/1.3.6.1.4.1.4491",
+        "names": [
+            "cableLabs"
+        ],
+        "sub_children": 5,
+        "sub_nodes_total": 3463
+    },
+    {
+        "identifier": "1.3.6.1.4.1.230",
+        "link": "https://oidref.com/1.3.6.1.4.1.230",
+        "names": [
+            "telematics"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 3388
+    },
+    {
+        "identifier": "1.3.6.1.4.1.207",
+        "link": "https://oidref.com/1.3.6.1.4.1.207",
+        "names": [
+            "alliedtelesyn",
+            "ati",
+            "alliedTelesis"
+        ],
+        "sub_children": 12,
+        "sub_nodes_total": 3373
+    },
+    {
+        "identifier": "1.3.6.1.4.1.181",
+        "link": "https://oidref.com/1.3.6.1.4.1.181",
+        "names": [
+            "adckentrox",
+            "adcNetworks"
+        ],
+        "sub_children": 5,
+        "sub_nodes_total": 3273
+    },
+    {
+        "identifier": "1.3.6.1.4.1.272",
+        "link": "https://oidref.com/1.3.6.1.4.1.272",
+        "names": [
+            "bintec"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 3263
+    },
+    {
+        "identifier": "1.3.6.1.4.1.5951",
+        "link": "https://oidref.com/1.3.6.1.4.1.5951",
+        "names": [
+            "netScaler"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 3255
+    },
+    {
+        "identifier": "1.3.6.1.4.1.130",
+        "link": "https://oidref.com/1.3.6.1.4.1.130",
+        "names": [
+            "banyan"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 3240
+    },
+    {
+        "identifier": "1.3.6.1.4.1.49",
+        "link": "https://oidref.com/1.3.6.1.4.1.49",
+        "names": [
+            "chipcom"
+        ],
+        "sub_children": 18,
+        "sub_nodes_total": 3226
+    },
+    {
+        "identifier": "1.3.6.1.4.1.311",
+        "link": "https://oidref.com/1.3.6.1.4.1.311",
+        "names": [
+            "microsoft"
+        ],
+        "sub_children": 26,
+        "sub_nodes_total": 3160
+    },
+    {
+        "identifier": "1.3.6.1.4.1.16",
+        "link": "https://oidref.com/1.3.6.1.4.1.16",
+        "names": [
+            "unisys-timeplex",
+            "unisys",
+            "hpnr",
+            "Timeplex",
+            "perc",
+            "ami"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 3129
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2426",
+        "link": "https://oidref.com/1.3.6.1.4.1.2426",
+        "names": [
+            "mariposaTech"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 3124
+    },
+    {
+        "identifier": "1.3.6.1.4.1.300",
+        "link": "https://oidref.com/1.3.6.1.4.1.300",
+        "names": [
+            "digital-link"
+        ],
+        "sub_children": 12,
+        "sub_nodes_total": 3107
+    },
+    {
+        "identifier": "1.3.6.1.4.1.277",
+        "link": "https://oidref.com/1.3.6.1.4.1.277",
+        "names": [
+            "cascade"
+        ],
+        "sub_children": 19,
+        "sub_nodes_total": 3086
+    },
+    {
+        "identifier": "1.3.6.1.4.1.818",
+        "link": "https://oidref.com/1.3.6.1.4.1.818",
+        "names": [
+            "imv"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 3035
+    },
+    {
+        "identifier": "1.3.6.1.4.1.1916",
+        "link": "https://oidref.com/1.3.6.1.4.1.1916",
+        "names": [
+            "extremenetworks",
+            "extreme"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 3032
+    },
+    {
+        "identifier": "1.3.6.1.4.1.321",
+        "link": "https://oidref.com/1.3.6.1.4.1.321",
+        "names": [
+            "verilink",
+            "IMPORTS"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 2995
+    },
+    {
+        "identifier": "1.3.6.1.4.1.3493",
+        "link": "https://oidref.com/1.3.6.1.4.1.3493",
+        "names": [
+            "basMIB"
+        ],
+        "sub_children": 23,
+        "sub_nodes_total": 2986
+    },
+    {
+        "identifier": "1.3.6.1.4.1.791",
+        "link": "https://oidref.com/1.3.6.1.4.1.791",
+        "names": [
+            "cai"
+        ],
+        "sub_children": 41,
+        "sub_nodes_total": 2935
+    },
+    {
+        "identifier": "1.3.6.1.4.1.353",
+        "link": "https://oidref.com/1.3.6.1.4.1.353",
+        "names": [
+            "atmForum"
+        ],
+        "sub_children": 5,
+        "sub_nodes_total": 2851
+    },
+    {
+        "identifier": "1.3.6.1.4.1.6141",
+        "link": "https://oidref.com/1.3.6.1.4.1.6141",
+        "names": [
+            "wwp"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 2758
+    },
+    {
+        "identifier": "1.3.6.1.4.1.119",
+        "link": "https://oidref.com/1.3.6.1.4.1.119",
+        "names": [
+            "nec"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 2738
+    },
+    {
+        "identifier": "1.3.6.1.4.1.123",
+        "link": "https://oidref.com/1.3.6.1.4.1.123",
+        "names": [
+            "newbridge"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 2688
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2066",
+        "link": "https://oidref.com/1.3.6.1.4.1.2066",
+        "names": [
+            "controlResources"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 2668
+    },
+    {
+        "identifier": "1.3.6.1.4.1.97",
+        "link": "https://oidref.com/1.3.6.1.4.1.97",
+        "names": [
+            "sigma"
+        ],
+        "sub_children": 33,
+        "sub_nodes_total": 2652
+    },
+    {
+        "identifier": "1.3.6.1.4.1.208",
+        "link": "https://oidref.com/1.3.6.1.4.1.208",
+        "names": [
+            "scanet"
+        ],
+        "sub_children": 17,
+        "sub_nodes_total": 2542
+    },
+    {
+        "identifier": "1.3.6.1.4.1.4526",
+        "link": "https://oidref.com/1.3.6.1.4.1.4526",
+        "names": [
+            "netgear"
+        ],
+        "sub_children": 17,
+        "sub_nodes_total": 2540
+    },
+    {
+        "identifier": "1.3.6.1.4.1.81",
+        "link": "https://oidref.com/1.3.6.1.4.1.81",
+        "names": [
+            "lannet"
+        ],
+        "sub_children": 33,
+        "sub_nodes_total": 2536
+    },
+    {
+        "identifier": "1.3.6.1.4.1.838",
+        "link": "https://oidref.com/1.3.6.1.4.1.838",
+        "names": [
+            "xedia"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 2534
+    },
+    {
+        "identifier": "1.3.6.1.4.1.22",
+        "link": "https://oidref.com/1.3.6.1.4.1.22",
+        "names": [
+            "fibronics",
+            "Spartacus"
+        ],
+        "sub_children": 15,
+        "sub_nodes_total": 2496
+    },
+    {
+        "identifier": "1.3.6.1.4.1.89",
+        "link": "https://oidref.com/1.3.6.1.4.1.89",
+        "names": [
+            "rnd"
+        ],
+        "sub_children": 85,
+        "sub_nodes_total": 2464
+    },
+    {
+        "identifier": "1.3.6.1.4.1.74",
+        "link": "https://oidref.com/1.3.6.1.4.1.74",
+        "names": [
+            "att-2"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 2426
+    },
+    {
+        "identifier": "1.3.6.1.4.1.14823",
+        "link": "https://oidref.com/1.3.6.1.4.1.14823",
+        "names": [
+            "aruba"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 2412
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2773",
+        "link": "https://oidref.com/1.3.6.1.4.1.2773",
+        "names": [
+            "redstone"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 2362
+    },
+    {
+        "identifier": "1.3.6.1.4.1.3052",
+        "link": "https://oidref.com/1.3.6.1.4.1.3052",
+        "names": [
+            "asentria",
+            "omnitronix"
+        ],
+        "sub_children": 16,
+        "sub_nodes_total": 2331
+    },
+    {
+        "identifier": "1.3.6.1.4.1.251",
+        "link": "https://oidref.com/1.3.6.1.4.1.251",
+        "names": [
+            "netcomm"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 2299
+    },
+    {
+        "identifier": "1.3.6.1.4.1.3551",
+        "link": "https://oidref.com/1.3.6.1.4.1.3551",
+        "names": [
+            "springtidenet"
+        ],
+        "sub_children": 5,
+        "sub_nodes_total": 2272
+    },
+    {
+        "identifier": "1.3.6.1.4.1.4881",
+        "link": "https://oidref.com/1.3.6.1.4.1.4881",
+        "names": [
+            "my"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 2271
+    },
+    {
+        "identifier": "1.3.6.1.4.1.11096",
+        "link": "https://oidref.com/1.3.6.1.4.1.11096",
+        "names": [
+            "blueArc"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 2262
+    },
+    {
+        "identifier": "1.3.6.1.4.1.476",
+        "link": "https://oidref.com/1.3.6.1.4.1.476",
+        "names": [
+            "emerson"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 2239
+    },
+    {
+        "identifier": "1.3.6.1.4.1.635",
+        "link": "https://oidref.com/1.3.6.1.4.1.635",
+        "names": [
+            "fastcomm"
+        ],
+        "sub_children": 10,
+        "sub_nodes_total": 2173
+    },
+    {
+        "identifier": "1.3.6.1.4.1.539",
+        "link": "https://oidref.com/1.3.6.1.4.1.539",
+        "names": [
+            "aii"
+        ],
+        "sub_children": 31,
+        "sub_nodes_total": 2163
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2620",
+        "link": "https://oidref.com/1.3.6.1.4.1.2620",
+        "names": [
+            "checkpoint"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 2073
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2785",
+        "link": "https://oidref.com/1.3.6.1.4.1.2785",
+        "names": [
+            "appian"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 2043
+    },
+    {
+        "identifier": "1.3.6.1.4.1.17373",
+        "link": "https://oidref.com/1.3.6.1.4.1.17373",
+        "names": [
+            "eaton"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 2027
+    },
+    {
+        "identifier": "1.3.6.1.4.1.171",
+        "link": "https://oidref.com/1.3.6.1.4.1.171",
+        "names": [
+            "dlink",
+            "d-link",
+            "company"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 2011
+    },
+    {
+        "identifier": "1.3.6.1.4.1.14179",
+        "link": "https://oidref.com/1.3.6.1.4.1.14179",
+        "names": [
+            "airespace"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 2006
+    },
+    {
+        "identifier": "1.3.6.1.4.1.3854",
+        "link": "https://oidref.com/1.3.6.1.4.1.3854",
+        "names": [
+            "akcp"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 1941
+    },
+    {
+        "identifier": "1.3.6.1.4.1.12356",
+        "link": "https://oidref.com/1.3.6.1.4.1.12356",
+        "names": [
+            "fortinet"
+        ],
+        "sub_children": 26,
+        "sub_nodes_total": 1908
+    },
+    {
+        "identifier": "1.3.6.1.4.1.15",
+        "link": "https://oidref.com/1.3.6.1.4.1.15",
+        "names": [
+            "xylogics"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 1896
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2467",
+        "link": "https://oidref.com/1.3.6.1.4.1.2467",
+        "names": [
+            "arrowPoint"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 1887
+    },
+    {
+        "identifier": "1.3.6.1.4.1.4513",
+        "link": "https://oidref.com/1.3.6.1.4.1.4513",
+        "names": [
+            "terawave"
+        ],
+        "sub_children": 21,
+        "sub_nodes_total": 1742
+    },
+    {
+        "identifier": "1.3.6.1.4.1.21239",
+        "link": "https://oidref.com/1.3.6.1.4.1.21239",
+        "names": [
+            "21239"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 1736
+    },
+    {
+        "identifier": "1.3.6.1.4.1.868",
+        "link": "https://oidref.com/1.3.6.1.4.1.868",
+        "names": [
+            "transition"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 1691
+    },
+    {
+        "identifier": "1.3.6.1.4.1.289",
+        "link": "https://oidref.com/1.3.6.1.4.1.289",
+        "names": [
+            "mcData"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 1687
+    },
+    {
+        "identifier": "1.3.6.1.4.1.94",
+        "link": "https://oidref.com/1.3.6.1.4.1.94",
+        "names": [
+            "nokia"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 1666
+    },
+    {
+        "identifier": "1.3.6.1.4.1.5624",
+        "link": "https://oidref.com/1.3.6.1.4.1.5624",
+        "names": [
+            "enterasys"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 1655
+    },
+    {
+        "identifier": "1.3.6.1.4.1.3076",
+        "link": "https://oidref.com/1.3.6.1.4.1.3076",
+        "names": [
+            "altigaRoot"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 1652
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2281",
+        "link": "https://oidref.com/1.3.6.1.4.1.2281",
+        "names": [
+            "ceragon"
+        ],
+        "sub_children": 242,
+        "sub_nodes_total": 1632
+    },
+    {
+        "identifier": "1.3.6.1.4.1.3224",
+        "link": "https://oidref.com/1.3.6.1.4.1.3224",
+        "names": [
+            "netscreen"
+        ],
+        "sub_children": 21,
+        "sub_nodes_total": 1625
+    },
+    {
+        "identifier": "1.3.6.1.4.1.412",
+        "link": "https://oidref.com/1.3.6.1.4.1.412",
+        "names": [
+            "dmtf"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 1615
+    },
+    {
+        "identifier": "1.3.6.1.4.1.8744",
+        "link": "https://oidref.com/1.3.6.1.4.1.8744",
+        "names": [
+            "colubris"
+        ],
+        "sub_children": 7,
+        "sub_nodes_total": 1610
+    },
+    {
+        "identifier": "1.3.6.1.4.1.16557",
+        "link": "https://oidref.com/1.3.6.1.4.1.16557",
+        "names": [
+            "irt"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 1561
+    },
+    {
+        "identifier": "1.3.6.1.4.1.546",
+        "link": "https://oidref.com/1.3.6.1.4.1.546",
+        "names": [
+            "empire"
+        ],
+        "sub_children": 16,
+        "sub_nodes_total": 1495
+    },
+    {
+        "identifier": "1.3.6.1.4.1.358",
+        "link": "https://oidref.com/1.3.6.1.4.1.358",
+        "names": [
+            "pacesetter"
+        ],
+        "sub_children": 11,
+        "sub_nodes_total": 1449
+    },
+    {
+        "identifier": "1.3.6.1.4.1.434",
+        "link": "https://oidref.com/1.3.6.1.4.1.434",
+        "names": [
+            "eicon"
+        ],
+        "sub_children": 9,
+        "sub_nodes_total": 1414
+    },
+    {
+        "identifier": "1.3.6.1.4.1.236",
+        "link": "https://oidref.com/1.3.6.1.4.1.236",
+        "names": [
+            "samsung"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 1389
+    },
+    {
+        "identifier": "1.3.6.1.4.1.644",
+        "link": "https://oidref.com/1.3.6.1.4.1.644",
+        "names": [
+            "eriEnterpriseRoot"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 1377
+    },
+    {
+        "identifier": "1.3.6.1.4.1.166",
+        "link": "https://oidref.com/1.3.6.1.4.1.166",
+        "names": [
+            "shiva"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 1357
+    },
+    {
+        "identifier": "1.3.6.1.4.1.5528",
+        "link": "https://oidref.com/1.3.6.1.4.1.5528",
+        "names": [
+            "netBotz",
+            "netBotzAPC"
+        ],
+        "sub_children": 10,
+        "sub_nodes_total": 1337
+    },
+    {
+        "identifier": "1.3.6.1.4.1.19536",
+        "link": "https://oidref.com/1.3.6.1.4.1.19536",
+        "names": [
+            "panduit"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 1337
+    },
+    {
+        "identifier": "1.3.6.1.4.1.597",
+        "link": "https://oidref.com/1.3.6.1.4.1.597",
+        "names": [
+            "comtek"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 1309
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2435",
+        "link": "https://oidref.com/1.3.6.1.4.1.2435",
+        "names": [
+            "brother"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 1303
+    },
+    {
+        "identifier": "1.3.6.1.4.1.12394",
+        "link": "https://oidref.com/1.3.6.1.4.1.12394",
+        "names": [
+            "12394"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 1281
+    },
+    {
+        "identifier": "1.3.6.1.4.1.64",
+        "link": "https://oidref.com/1.3.6.1.4.1.64",
+        "names": [
+            "gandalf"
+        ],
+        "sub_children": 66,
+        "sub_nodes_total": 1278
+    },
+    {
+        "identifier": "1.3.6.1.4.1.253",
+        "link": "https://oidref.com/1.3.6.1.4.1.253",
+        "names": [
+            "xerox"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 1274
+    },
+    {
+        "identifier": "1.3.6.1.4.1.3695",
+        "link": "https://oidref.com/1.3.6.1.4.1.3695",
+        "names": [
+            "chromatis"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 1268
+    },
+    {
+        "identifier": "1.3.6.1.4.1.21013",
+        "link": "https://oidref.com/1.3.6.1.4.1.21013",
+        "names": [
+            "21013"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 1260
+    },
+    {
+        "identifier": "1.3.6.1.4.1.285",
+        "link": "https://oidref.com/1.3.6.1.4.1.285",
+        "names": [
+            "olicom"
+        ],
+        "sub_children": 11,
+        "sub_nodes_total": 1259
+    },
+    {
+        "identifier": "1.3.6.1.4.1.1141",
+        "link": "https://oidref.com/1.3.6.1.4.1.1141",
+        "names": [
+            "com21"
+        ],
+        "sub_children": 5,
+        "sub_nodes_total": 1251
+    },
+    {
+        "identifier": "1.3.6.1.4.1.3174",
+        "link": "https://oidref.com/1.3.6.1.4.1.3174",
+        "names": [
+            "tiaraNetworks"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 1219
+    },
+    {
+        "identifier": "1.3.6.1.4.1.11898",
+        "link": "https://oidref.com/1.3.6.1.4.1.11898",
+        "names": [
+            "11898"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 1191
+    },
+    {
+        "identifier": "1.3.6.1.4.1.8603",
+        "link": "https://oidref.com/1.3.6.1.4.1.8603",
+        "names": [
+            "flarion"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 1152
+    },
+    {
+        "identifier": "1.3.6.1.4.1.114",
+        "link": "https://oidref.com/1.3.6.1.4.1.114",
+        "names": [
+            "synernetics"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 1145
+    },
+    {
+        "identifier": "1.3.6.1.4.1.14125",
+        "link": "https://oidref.com/1.3.6.1.4.1.14125",
+        "names": [
+            "14125"
+        ],
+        "sub_children": 10,
+        "sub_nodes_total": 1142
+    },
+    {
+        "identifier": "1.3.6.1.4.1.334",
+        "link": "https://oidref.com/1.3.6.1.4.1.334",
+        "names": [
+            "lotus"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 1136
+    },
+    {
+        "identifier": "1.3.6.1.4.1.795",
+        "link": "https://oidref.com/1.3.6.1.4.1.795",
+        "names": [
+            "adaptec"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 1135
+    },
+    {
+        "identifier": "1.3.6.1.4.1.333",
+        "link": "https://oidref.com/1.3.6.1.4.1.333",
+        "names": [
+            "cnt"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 1127
+    },
+    {
+        "identifier": "1.3.6.1.4.1.1954",
+        "link": "https://oidref.com/1.3.6.1.4.1.1954",
+        "names": [
+            "amtec"
+        ],
+        "sub_children": 29,
+        "sub_nodes_total": 1122
+    },
+    {
+        "identifier": "1.3.6.1.4.1.629",
+        "link": "https://oidref.com/1.3.6.1.4.1.629",
+        "names": [
+            "nbase"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 1100
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2696",
+        "link": "https://oidref.com/1.3.6.1.4.1.2696",
+        "names": [
+            "dvb"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 1059
+    },
+    {
+        "identifier": "1.3.6.1.4.1.4329",
+        "link": "https://oidref.com/1.3.6.1.4.1.4329",
+        "names": [
+            "siemens"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 1058
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2001",
+        "link": "https://oidref.com/1.3.6.1.4.1.2001",
+        "names": [
+            "okidata"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 1052
+    },
+    {
+        "identifier": "1.3.6.1.4.1.20916",
+        "link": "https://oidref.com/1.3.6.1.4.1.20916",
+        "names": [
+            "20916"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 1035
+    },
+    {
+        "identifier": "1.3.6.1.4.1.1211",
+        "link": "https://oidref.com/1.3.6.1.4.1.1211",
+        "names": [
+            "storagetek"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 1015
+    },
+    {
+        "identifier": "1.3.6.1.4.1.9804",
+        "link": "https://oidref.com/1.3.6.1.4.1.9804",
+        "names": [
+            "lefthandnetworks"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 1010
+    },
+    {
+        "identifier": "1.3.6.1.4.1.9635",
+        "link": "https://oidref.com/1.3.6.1.4.1.9635",
+        "names": [
+            "9635"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 995
+    },
+    {
+        "identifier": "1.3.6.1.4.1.30212",
+        "link": "https://oidref.com/1.3.6.1.4.1.30212",
+        "names": [
+            "ontel"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 994
+    },
+    {
+        "identifier": "1.3.6.1.4.1.4618",
+        "link": "https://oidref.com/1.3.6.1.4.1.4618",
+        "names": [
+            "armillaire"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 991
+    },
+    {
+        "identifier": "1.3.6.1.4.1.841",
+        "link": "https://oidref.com/1.3.6.1.4.1.841",
+        "names": [
+            "proxim"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 989
+    },
+    {
+        "identifier": "1.3.6.1.4.1.170",
+        "link": "https://oidref.com/1.3.6.1.4.1.170",
+        "names": [
+            "bicc",
+            "bitec",
+            "bicctech"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 985
+    },
+    {
+        "identifier": "1.3.6.1.4.1.4323",
+        "link": "https://oidref.com/1.3.6.1.4.1.4323",
+        "names": [
+            "quantumBridge"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 972
+    },
+    {
+        "identifier": "1.3.6.1.4.1.23937",
+        "link": "https://oidref.com/1.3.6.1.4.1.23937",
+        "names": [
+            "23937"
+        ],
+        "sub_children": 19,
+        "sub_nodes_total": 966
+    },
+    {
+        "identifier": "1.3.6.1.4.1.1123",
+        "link": "https://oidref.com/1.3.6.1.4.1.1123",
+        "names": [
+            "symbios",
+            "engenio-information-technologies"
+        ],
+        "sub_children": 7,
+        "sub_nodes_total": 950
+    },
+    {
+        "identifier": "1.3.6.1.4.1.24350",
+        "link": "https://oidref.com/1.3.6.1.4.1.24350",
+        "names": [
+            "24350"
+        ],
+        "sub_children": 16,
+        "sub_nodes_total": 949
+    },
+    {
+        "identifier": "1.3.6.1.4.1.927",
+        "link": "https://oidref.com/1.3.6.1.4.1.927",
+        "names": [
+            "pairgain"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 948
+    },
+    {
+        "identifier": "1.3.6.1.4.1.3582",
+        "link": "https://oidref.com/1.3.6.1.4.1.3582",
+        "names": [
+            "lsi"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 947
+    },
+    {
+        "identifier": "1.3.6.1.4.1.226",
+        "link": "https://oidref.com/1.3.6.1.4.1.226",
+        "names": [
+            "codima"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 940
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2516",
+        "link": "https://oidref.com/1.3.6.1.4.1.2516",
+        "names": [
+            "vocaltec"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 931
+    },
+    {
+        "identifier": "1.3.6.1.4.1.23304",
+        "link": "https://oidref.com/1.3.6.1.4.1.23304",
+        "names": [
+            "codanGroup"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 929
+    },
+    {
+        "identifier": "1.3.6.1.4.1.930",
+        "link": "https://oidref.com/1.3.6.1.4.1.930",
+        "names": [
+            "centillion"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 917
+    },
+    {
+        "identifier": "1.3.6.1.4.1.193",
+        "link": "https://oidref.com/1.3.6.1.4.1.193",
+        "names": [
+            "ericsson"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 889
+    },
+    {
+        "identifier": "1.3.6.1.4.1.727",
+        "link": "https://oidref.com/1.3.6.1.4.1.727",
+        "names": [
+            "lucent",
+            "presticom"
+        ],
+        "sub_children": 38,
+        "sub_nodes_total": 882
+    },
+    {
+        "identifier": "1.3.6.1.4.1.809",
+        "link": "https://oidref.com/1.3.6.1.4.1.809",
+        "names": [
+            "hynet"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 881
+    },
+    {
+        "identifier": "1.3.6.1.4.1.711",
+        "link": "https://oidref.com/1.3.6.1.4.1.711",
+        "names": [
+            "lightStream"
+        ],
+        "sub_children": 5,
+        "sub_nodes_total": 866
+    },
+    {
+        "identifier": "1.3.6.1.4.1.173",
+        "link": "https://oidref.com/1.3.6.1.4.1.173",
+        "names": [
+            "netlink"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 855
+    },
+    {
+        "identifier": "1.3.6.1.4.1.559",
+        "link": "https://oidref.com/1.3.6.1.4.1.559",
+        "names": [
+            "sonix"
+        ],
+        "sub_children": 9,
+        "sub_nodes_total": 850
+    },
+    {
+        "identifier": "1.3.6.1.4.1.522",
+        "link": "https://oidref.com/1.3.6.1.4.1.522",
+        "names": [
+            "aironet"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 847
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2926",
+        "link": "https://oidref.com/1.3.6.1.4.1.2926",
+        "names": [
+            "sonomaSystems"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 843
+    },
+    {
+        "identifier": "1.3.6.1.4.1.9148",
+        "link": "https://oidref.com/1.3.6.1.4.1.9148",
+        "names": [
+            "acmepacket"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 838
+    },
+    {
+        "identifier": "1.3.6.1.4.1.3764",
+        "link": "https://oidref.com/1.3.6.1.4.1.3764",
+        "names": [
+            "adic"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 834
+    },
+    {
+        "identifier": "1.3.6.1.4.1.116",
+        "link": "https://oidref.com/1.3.6.1.4.1.116",
+        "names": [
+            "hitachi"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 830
+    },
+    {
+        "identifier": "1.3.6.1.4.1.5003",
+        "link": "https://oidref.com/1.3.6.1.4.1.5003",
+        "names": [
+            "5003"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 825
+    },
+    {
+        "identifier": "1.3.6.1.4.1.5567",
+        "link": "https://oidref.com/1.3.6.1.4.1.5567",
+        "names": [
+            "riverstoneNetworks"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 822
+    },
+    {
+        "identifier": "1.3.6.1.4.1.1",
+        "link": "https://oidref.com/1.3.6.1.4.1.1",
+        "names": [
+            "Proteon",
+            "private",
+            "fsan"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 820
+    },
+    {
+        "identifier": "1.3.6.1.4.1.1996",
+        "link": "https://oidref.com/1.3.6.1.4.1.1996",
+        "names": [
+            "coppermountain"
+        ],
+        "sub_children": 35,
+        "sub_nodes_total": 814
+    },
+    {
+        "identifier": "1.3.6.1.4.1.494",
+        "link": "https://oidref.com/1.3.6.1.4.1.494",
+        "names": [
+            "madge"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 811
+    },
+    {
+        "identifier": "1.3.6.1.4.1.327",
+        "link": "https://oidref.com/1.3.6.1.4.1.327",
+        "names": [
+            "centrum"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 804
+    },
+    {
+        "identifier": "1.3.6.1.4.1.20677",
+        "link": "https://oidref.com/1.3.6.1.4.1.20677",
+        "names": [
+            "pulizzi"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 795
+    },
+    {
+        "identifier": "1.3.6.1.4.1.50",
+        "link": "https://oidref.com/1.3.6.1.4.1.50",
+        "names": [
+            "ods"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 794
+    },
+    {
+        "identifier": "1.3.6.1.4.1.4369",
+        "link": "https://oidref.com/1.3.6.1.4.1.4369",
+        "names": [
+            "nishan"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 792
+    },
+    {
+        "identifier": "1.3.6.1.4.1.10950",
+        "link": "https://oidref.com/1.3.6.1.4.1.10950",
+        "names": [
+            "netrake"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 784
+    },
+    {
+        "identifier": "1.3.6.1.4.1.10",
+        "link": "https://oidref.com/1.3.6.1.4.1.10",
+        "names": [
+            "nsc"
+        ],
+        "sub_children": 2,
+        "sub_nodes_total": 779
+    },
+    {
+        "identifier": "1.3.6.1.4.1.7146",
+        "link": "https://oidref.com/1.3.6.1.4.1.7146",
+        "names": [
+            "7146"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 776
+    },
+    {
+        "identifier": "1.3.6.1.4.1.6050",
+        "link": "https://oidref.com/1.3.6.1.4.1.6050",
+        "names": [
+            "6050"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 775
+    },
+    {
+        "identifier": "1.3.6.1.4.1.2606",
+        "link": "https://oidref.com/1.3.6.1.4.1.2606",
+        "names": [
+            "rittal"
+        ],
+        "sub_children": 3,
+        "sub_nodes_total": 744
+    },
+    {
+        "identifier": "1.3.6.1.4.1.7933",
+        "link": "https://oidref.com/1.3.6.1.4.1.7933",
+        "names": [
+            "promiseTech",
+            "promise"
+        ],
+        "sub_children": 5,
+        "sub_nodes_total": 741
+    },
+    {
+        "identifier": "1.3.6.1.4.1.626",
+        "link": "https://oidref.com/1.3.6.1.4.1.626",
+        "names": [
+            "hypercom"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 738
+    },
+    {
+        "identifier": "1.3.6.1.4.1.3607",
+        "link": "https://oidref.com/1.3.6.1.4.1.3607",
+        "names": [
+            "cerent"
+        ],
+        "sub_children": 6,
+        "sub_nodes_total": 720
+    },
+    {
+        "identifier": "1.3.6.1.4.1.1978",
+        "link": "https://oidref.com/1.3.6.1.4.1.1978",
+        "names": [
+            "ngcan"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 711
+    },
+    {
+        "identifier": "1.3.6.1.4.1.466",
+        "link": "https://oidref.com/1.3.6.1.4.1.466",
+        "names": [
+            "tylink"
+        ],
+        "sub_children": 5,
+        "sub_nodes_total": 709
+    },
+    {
+        "identifier": "1.3.6.1.4.1.5812",
+        "link": "https://oidref.com/1.3.6.1.4.1.5812",
+        "names": [
+            "coriolisMibs"
+        ],
+        "sub_children": 57,
+        "sub_nodes_total": 674
+    },
+    {
+        "identifier": "1.3.6.1.4.1.760",
+        "link": "https://oidref.com/1.3.6.1.4.1.760",
+        "names": [
+            "pandatel"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 669
+    },
+    {
+        "identifier": "1.3.6.1.4.1.102",
+        "link": "https://oidref.com/1.3.6.1.4.1.102",
+        "names": [
+            "mnpi"
+        ],
+        "sub_children": 4,
+        "sub_nodes_total": 652
+    },
+    {
+        "identifier": "1.3.6.1.4.1.1117",
+        "link": "https://oidref.com/1.3.6.1.4.1.1117",
+        "names": [
+            "avanti"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 644
+    },
+    {
+        "identifier": "1.3.6.1.4.1.3167",
+        "link": "https://oidref.com/1.3.6.1.4.1.3167",
+        "names": [
+            "nice"
+        ],
+        "sub_children": 1,
+        "sub_nodes_total": 630
+    }
+]
