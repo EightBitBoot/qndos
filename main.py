@@ -232,7 +232,7 @@ def main():
     with open(runtime_file_url, "w+t") as runtime_file:
         runtime_file.write(f"Start: {str(then)}\n")
 
-    entrypoint(TWO_URL)
+    entrypoint(ONE_URL)
 
     now = time.time_ns()
 
