@@ -51,6 +51,9 @@ def scrape_description_list(soup: BeautifulSoup) -> Dict:
 
     description_list = soup.find("dl")
 
+    if description_list == None:
+        return None
+
     for description_term in description_list.find_all("dt"):
         converted_term = str(description_term.string).lower().replace(" ", "_")
         description_desc = description_term.next_sibling
@@ -162,7 +165,16 @@ def process_one(url: str, use_mongo: bool = True) -> List[Child]:
     soup = BeautifulSoup(response.text, "html.parser")
 
     data = {"scrape_time": time.time_ns()}
-    data.update(scrape_description_list(soup))
+    scraped_dl = scrape_description_list(soup)
+
+    if scraped_dl == None:
+        with open("no_dl_page.html", "w+t") as error_file:
+            error_file.write(soup.prettify())
+
+        print("Page for {url.split('/')[-1]} didn't contain a dl: exiting!")
+        exit(1)
+
+    data.update(scraped_dl)
     data["detailed_data"] = scrape_detailed_data(soup)
 
     children = scrape_children(soup)
