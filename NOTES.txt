@@ -1,1 +1,3 @@
 * Some node codes are None as the oids contain numbers too large for unsigned long longs
+
+* 1.3.6.1.4.1 (enterprise; the page that won't load) has been added to the database

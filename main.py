@@ -161,7 +161,6 @@ MULTITHREAD_LIST = []
 SKIP_URLS = ["https://oidref.com/1.3.6.1.4.1"]
 
 mongodb_client = None
-MONGODB_URL = "friendlysqueeze.com"
 
 def traverse_tree(url: str):
     response = requests.get(url)
@@ -174,7 +173,7 @@ def traverse_tree(url: str):
         with open("no_dl_page.html", "w+t") as error_file:
             error_file.write(soup.prettify())
 
-        print("Page for {url.split('/')[-1]} didn't contain a dl: exiting!")
+        print(f"Page for {url.split('/')[-1]} didn't contain a dl: exiting!")
         exit(1)
 
     data.update(scraped_dl)
