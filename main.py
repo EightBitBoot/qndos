@@ -166,19 +166,23 @@ def scrape_children(soup):
 # ------------------ Traverser ------------------
 
 def traverse_tree(url: str):
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, "html.parser")
+    sucessful_page = False
+    while not sucessful_page:
+        # Thanks for the do while python
 
-    data = {"scrape_time": time.time_ns()}
-    scraped_dl = scrape_description_list(soup)
+        response = requests.get(url)
+        soup = BeautifulSoup(response.text, "html.parser")
 
-    if scraped_dl == None:
-        with open("no_dl_page.html", "w+t") as error_file:
-            error_file.write(soup.prettify())
+        data = {"scrape_time": time.time_ns()}
+        scraped_dl = scrape_description_list(soup)
 
-        print(f"Page for {url.split('/')[-1]} didn't contain a dl: exiting!")
-        print(f"Root node: {current_root_node}") # Added for resuming scraping of the children of enterprise
-        exit(1)
+        if scraped_dl == None:
+            # The website threw an error page: wait 5 minutes
+            print(f"Page for {url.split('/')[-1]} didn't contain a dl: waiting 5 minutes!")
+
+            time.sleep(5 * 60)
+        else:
+            sucessful_page = True
 
     data.update(scraped_dl)
     data["detailed_data"] = scrape_detailed_data(soup)
