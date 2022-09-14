@@ -43,6 +43,15 @@ mongodb_client = None
 
 current_root_node = None # Used for exception logging
 
+# Drill Down globals
+MULTITHREAD_LIST = []
+SKIP_URLS = ["https://oidref.com/1.3.6.1.4.1"]
+
+ROOT_START_URL = "https://oidref.com/1.3.6.1.4.1.9"
+
+DRILL_DOWN_OID = ["1", "1.3", "1.3.6", "1.3.6.1", "1.3.6.1.4", "1.3.6.1.4.1", "1.3.6.1.4.1.9", "1.3.6.1.4.1.9.1", "1.3.6.1.4.1.9.1.996"]
+traversal_started = False
+
 # ------------------ Utils ------------------
 
 def get_next_sibling_tag(tag):
@@ -197,19 +206,12 @@ def process_one(url: str, use_mongo: bool = True) -> List[Child]:
             mongodb_collection.insert_one(data)
             print(data["dot_oid"], flush=True)
 
+    else:
+        print(f"no mongo: {data['dot_oid']}", flush=True)
+
     return data,children
 
 
-# ------------------ Traverser ------------------
-
-MULTITHREAD_LIST = []
-SKIP_URLS = ["https://oidref.com/1.3.6.1.4.1"]
-
-# 1.2.840.10036.1.22.1.2.1.17
-DRILL_DOWN_OID = ["1", "1.2", "1.2.840", "1.2.840.10036", "1.2.840.10036.1", "1.2.840.10036.1.22", "1.2.840.10036.1.22.1", "1.2.840.10036.1.22.1.2", "1.2.840.10036.1.22.1.2.1", "1.2.840.10036.1.22.1.2.1.17"]
-traversal_started = False
-
-mongodb_client = None
 
 def traverse_tree(url: str):
     global traversal_started
@@ -218,7 +220,7 @@ def traverse_tree(url: str):
 
     if data["dot_oid"] == DRILL_DOWN_OID[-1]:
         traversal_started = True
-        print("Found start")
+        print("Found start ^")
 
     if data["dot_oid"] in MULTITHREAD_LIST:
         print(f"Multithreading on children of {data['dot_oid']}", flush=True)
@@ -285,10 +287,18 @@ def entrypoint(url: str):
 
     enterprise_children_list = grab_enterprise_children()
     
+    drill_down_root_found = False
     for child in enterprise_children_list:
         current_root_node = child["link"].split("/")[-1]
+
+        if not drill_down_root_found and child["link"] != ROOT_START_URL:
+            continue
+        elif not drill_down_root_found and child["link"] == ROOT_START_URL:
+            print("Starting root found")
+            drill_down_root_found = True
         
         traverse_tree(child["link"])
+
 
 def main():
     local_timezone = datetime.datetime.now(datetime.timezone.utc).astimezone().tzinfo
