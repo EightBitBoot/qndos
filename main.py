@@ -35,6 +35,14 @@ NO_CHILDREN_URL = "https://oidref.com/0.5"
 # Child object for child scraper
 Child = namedtuple("Child", ["url", "direct_children", "subnodes_total"])
 
+# Globals
+MULTITHREAD_LIST = []
+SKIP_URLS = ["https://oidref.com/1.3.6.1.4.1"]
+
+mongodb_client = None
+
+current_root_node = None # Used for exception logging
+
 # ------------------ Utils ------------------
 
 def get_next_sibling_tag(tag):
@@ -126,7 +134,7 @@ def scrape_detailed_data(soup: BeautifulSoup) -> Dict:
 
 
 def scrape_children(soup):
-    children = []    
+    children = []
 
     children_header = soup.find(name="h3", string=re.compile("[cC]hildren"))
 
@@ -155,24 +163,26 @@ def scrape_children(soup):
     return children
 
 
-# ------------------ Processor ------------------
-
-mongodb_client = None
-MONGODB_URL = "friendlysqueeze.com"
+# ------------------ Traverser ------------------
 
 def process_one(url: str, use_mongo: bool = True) -> List[Child]:
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, "html.parser")
+    sucessful_page = False
+    while not sucessful_page:
+        # Thanks for the do while python
 
-    data = {"scrape_time": time.time_ns()}
-    scraped_dl = scrape_description_list(soup)
+        response = requests.get(url)
+        soup = BeautifulSoup(response.text, "html.parser")
 
-    if scraped_dl == None:
-        with open("no_dl_page.html", "w+t") as error_file:
-            error_file.write(soup.prettify())
+        data = {"scrape_time": time.time_ns()}
+        scraped_dl = scrape_description_list(soup)
 
-        print("Page for {url.split('/')[-1]} didn't contain a dl: exiting!")
-        exit(1)
+        if scraped_dl == None:
+            # The website threw an error page: wait 5 minutes
+            print(f"Page for {url.split('/')[-1]} didn't contain a dl: waiting 5 minutes!")
+
+            time.sleep(5 * 60)
+        else:
+            sucessful_page = True
 
     data.update(scraped_dl)
     data["detailed_data"] = scrape_detailed_data(soup)
@@ -232,8 +242,29 @@ def traverse_tree(url: str):
             traverse_tree(child.url)
     
 
+def grab_enterprise_children():
+    enterprise_file_path = "convert_enterprise/enterprise_compact.json"
+    if not os.path.exists(enterprise_file_path):
+        print(f"Converted enterprise children file not found at \"{enterprise_file_path}\"!")
+        exit(1)
+
+    enterprise_children_list = None
+    with open(enterprise_file_path, "rt") as enterprise_file:
+        enterprise_children_list = json.load(enterprise_file)
+
+    return enterprise_children_list
+
+
+def new_except_hook(exception_type, value, backtrace):
+    global old_excepthook
+
+    print(f"------------- Exception under root node {current_root_node} -------------")
+    sys.__excepthook__(exception_type, value, backtrace)
+
+
 def entrypoint(url: str):
     global mongodb_client
+    global current_root_node
 
     mongodb_client = None
 
@@ -250,8 +281,14 @@ def entrypoint(url: str):
             authMechanism="SCRAM-SHA-1"
         )
 
-    traverse_tree(url)
+    sys.excepthook = new_except_hook 
 
+    enterprise_children_list = grab_enterprise_children()
+    
+    for child in enterprise_children_list:
+        current_root_node = child["link"].split("/")[-1]
+        
+        traverse_tree(child["link"])
 
 def main():
     local_timezone = datetime.datetime.now(datetime.timezone.utc).astimezone().tzinfo
