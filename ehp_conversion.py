@@ -1,8 +1,13 @@
 from typing import Dict, List
 
+import re
+import json
+import time
+
 import requests
 import ehp
 import dateparser
+from markdownify import markdownify
 
 ENTERPRISE_FILE_PATH = "convert_enterprise/1.3.6.1.4.1.html"
 
@@ -81,27 +86,82 @@ def scrape_description_list(root: ehp.Root) -> Dict:
     return data
 
 
+PARAGRAPH_SPLIT_PATTERN = re.compile(r"\<\s*h3\s*\>")    
+
+def scrape_detailed_data(root: ehp.Root) -> Dict:
+    data = {}
+
+    def get_pairs():
+        result = []
+
+        for parent,header in root.find_with_root("h3"):
+            header_index = parent.index(header)
+
+            paragraph_index = header_index + 1
+            while type(parent[paragraph_index]) != ehp.Tag and paragraph_index < len(parent):
+                # Skip non Tag items in parent
+                paragraph_index += 1
+
+            if paragraph_index >= len(parent):
+                continue
+
+            result.append((header, parent[paragraph_index]))
+
+        return result
+
+
+    header_paragraph_pairs = get_pairs()
+
+    for header,paragraph in header_paragraph_pairs:
+        converted_header = header.text().strip().lower().replace(" ", "_")
+
+        if "recovered" in converted_header:
+            # Ignore "recovered" sections
+            continue
+
+        if "registration_authority" in converted_header:
+            # Handle unclosed paragraph tags
+            html_str = str(paragraph)
+            split_str = PARAGRAPH_SPLIT_PATTERN.split(html_str)
+            data[converted_header] = markdownify(split_str[0].replace("<p>", "").replace("</p>", "").strip()).strip()
+            continue
+
+        if "children" in converted_header or "brothers" in converted_header:
+            break
+
+        data[converted_header] = markdownify(str(paragraph)).strip()
+
+    return data
+
+
 def main():
     ehp_parser = ehp.Html()
 
-    # enterprise_file_contents = None
-    # with open(ENTERPRISE_FILE_PATH, "rt") as enterprise_file:
-    #     enterprise_file_contents = enterprise_file.read()
+    enterprise_file_contents = None
+    with open(ENTERPRISE_FILE_PATH, "rt") as enterprise_file:
+        enterprise_file_contents = enterprise_file.read()
 
-    # root = ehp_parser.feed(enterprise_file_contents)
+    then = time.perf_counter()
+    root = ehp_parser.feed(enterprise_file_contents)
 
-    test_page_contents = None
-    with open("test_page.html", "rt") as test_page_file:
-        test_page_contents = test_page_file.read()
+    # test_page_contents = None
+    # with open("test_page.html", "rt") as test_page_file:
+    #     test_page_contents = test_page_file.read()
 
-    root = ehp_parser.feed(test_page_contents)
+    # root = ehp_parser.feed(test_page_contents)
 
     # response = requests.get("https://google.com")    
     # root = ehp_parser.feed(response.text)
 
     scraped_description_list = scrape_description_list(root)
+    # print(scraped_description_list)
 
-    print(scraped_description_list)
+    scraped_detailed_data = scrape_detailed_data(root)
+    # print(json.dumps(scraped_detailed_data, indent=4))
+
+    now = time.perf_counter()
+
+    print(now - then)
 
 
 if __name__ == "__main__":
