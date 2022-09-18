@@ -63,7 +63,12 @@ def scrape_description_list(root: ehp.Root) -> Dict:
                         converted_content = None
                     else:
                         converted_content = section_content.text().strip()
-            case "node_names" | "asn1_oid" | "iri_oid":
+            case "node_names":
+                if len(section_content) == 1:
+                    converted_content = [section_content.text().strip()]
+                else:
+                    converted_content = extract_list(section_content)
+            case "asn1_oid" | "iri_oid":
                 converted_content = extract_list(section_content)
             case "creation_date" | "modification_date":
                 # {"TIMEZONE": "UTC"} avoids a PytzUsageWarning
@@ -77,15 +82,21 @@ def scrape_description_list(root: ehp.Root) -> Dict:
 
 
 def main():
-    enterprise_file_contents = None
-    with open(ENTERPRISE_FILE_PATH, "rt") as enterprise_file:
-        enterprise_file_contents = enterprise_file.read()
-
-    response = requests.get("https://google.com")    
-
     ehp_parser = ehp.Html()
 
-    root = ehp_parser.feed(enterprise_file_contents)
+    # enterprise_file_contents = None
+    # with open(ENTERPRISE_FILE_PATH, "rt") as enterprise_file:
+    #     enterprise_file_contents = enterprise_file.read()
+
+    # root = ehp_parser.feed(enterprise_file_contents)
+
+    test_page_contents = None
+    with open("test_page.html", "rt") as test_page_file:
+        test_page_contents = test_page_file.read()
+
+    root = ehp_parser.feed(test_page_contents)
+
+    # response = requests.get("https://google.com")    
     # root = ehp_parser.feed(response.text)
 
     scraped_description_list = scrape_description_list(root)
