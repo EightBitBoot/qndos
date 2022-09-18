@@ -35,19 +35,6 @@ def scrape_description_list(root: ehp.Root) -> Dict:
     section_titles = [dt.text().strip().lower().replace(" ", "_") for dt in description_list.find("dt")]   
     section_contents = list(description_list.find("dd"))
 
-    # for i in range(len(section_titles)):
-    #     print(section_titles[i])
-    #     print("-----------------")
-
-    #     if section_titles[i] in ["node_names", "asn1_oid", "iri_oid"]:
-    #         print(extract_list(section_contents[i]))
-    #     else:
-    #         print(list(section_contents[i]))
-
-    #     print()
-
-    # return {}
-
     for i in range(len(section_titles)):
         section_title = section_titles[i]
         section_content = section_contents[i]
