@@ -1,8 +1,9 @@
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
 import re
 import json
 import time
+import copy
 
 import requests
 import ehp
@@ -26,12 +27,7 @@ def extract_list(tag: ehp.Root) -> List[str]:
 def scrape_description_list(root: ehp.Root) -> Dict:
     data = {}
 
-    description_list = None
-    try:
-        description_list = list(root.find("dl"))[0]
-    except IndexError as e:
-        # Root doesn't contain a dl tag: Gulp
-        pass
+    description_list = root.fst("dt")
 
     if description_list == None:
         # Skip scraping if Root doesn't contain a dl tag
@@ -110,6 +106,29 @@ def scrape_detailed_data(root: ehp.Root) -> Dict:
         return result
 
 
+    def get_authority_paragraph(root: ehp.Tag) -> Tuple[ehp.Tag, bool]:
+        # TODO(Adin): This needs to be cleaned up or rewritten
+
+        result = ehp.Tag(name=root.name, attr=root.attr)
+
+        for child in root:
+            if type(child) in [ehp.Data, ehp.Amp, ehp.Code, ehp.XTag]:
+                result.append(child)
+                continue
+
+            if child.name == "h3":
+                return (result,True)
+
+            new_child,h3_found = get_authority_paragraph(child)
+            result.append(new_child)
+
+            if h3_found:
+                return (result,True)
+
+
+        return (result,False)
+
+
     header_paragraph_pairs = get_pairs()
 
     for header,paragraph in header_paragraph_pairs:
@@ -120,10 +139,8 @@ def scrape_detailed_data(root: ehp.Root) -> Dict:
             continue
 
         if "registration_authority" in converted_header:
-            # Handle unclosed paragraph tags
-            html_str = str(paragraph)
-            split_str = PARAGRAPH_SPLIT_PATTERN.split(html_str)
-            data[converted_header] = markdownify(split_str[0].replace("<p>", "").replace("</p>", "").strip()).strip()
+            truncated_paragraph,_ = get_authority_paragraph(paragraph)
+            data[converted_header] = markdownify(str(truncated_paragraph)).strip()
             continue
 
         if "children" in converted_header or "brothers" in converted_header:
@@ -137,27 +154,30 @@ def scrape_detailed_data(root: ehp.Root) -> Dict:
 def main():
     ehp_parser = ehp.Html()
 
-    enterprise_file_contents = None
-    with open(ENTERPRISE_FILE_PATH, "rt") as enterprise_file:
-        enterprise_file_contents = enterprise_file.read()
+    # enterprise_file_contents = None
+    # with open(ENTERPRISE_FILE_PATH, "rt") as enterprise_file:
+    #     enterprise_file_contents = enterprise_file.read()
+
+    # then = time.perf_counter()
+    # root = ehp_parser.feed(enterprise_file_contents)
+
+    test_page_contents = None
+    with open("test_page.html", "rt") as test_page_file:
+        test_page_contents = test_page_file.read()
 
     then = time.perf_counter()
-    root = ehp_parser.feed(enterprise_file_contents)
-
-    # test_page_contents = None
-    # with open("test_page.html", "rt") as test_page_file:
-    #     test_page_contents = test_page_file.read()
-
-    # root = ehp_parser.feed(test_page_contents)
+    root = ehp_parser.feed(test_page_contents)
 
     # response = requests.get("https://google.com")    
+
+    # then = time.perf_counter()
     # root = ehp_parser.feed(response.text)
 
     scraped_description_list = scrape_description_list(root)
     # print(scraped_description_list)
 
     scraped_detailed_data = scrape_detailed_data(root)
-    # print(json.dumps(scraped_detailed_data, indent=4))
+    print(json.dumps(scraped_detailed_data, indent=4))
 
     now = time.perf_counter()
 
