@@ -4,6 +4,7 @@ import re
 import json
 import time
 import copy
+from collections import namedtuple
 
 import requests
 import ehp
@@ -11,6 +12,10 @@ import dateparser
 from markdownify import markdownify
 
 ENTERPRISE_FILE_PATH = "convert_enterprise/1.3.6.1.4.1.html"
+
+BASE_URL = "https://oidref.com"
+
+Child = namedtuple("Child", ["url", "direct_children", "subnodes_total"])
 
 def extract_list(tag: ehp.Root) -> List[str]:
     result = []
@@ -151,24 +156,80 @@ def scrape_detailed_data(root: ehp.Root) -> Dict:
     return data
 
 
+def scrape_children(root: ehp.Root):
+    def get_children_table():
+        children_header_root = None
+        children_header = None
+
+        for header_root,header in root.find_with_root("h3"):
+            if re.search(r"[cC]hildren", header.text().strip()):
+                children_header_root,children_header = header_root,header
+                break
+
+        if not children_header:
+            return children
+
+        children_table_index = children_header_root.index(children_header) + 1
+        while children_table_index <= len(children_header_root) and type(children_header_root[children_table_index]) != ehp.Tag:
+            children_table_index += 1
+
+        if children_table_index >= len(children_header_root):
+            return None
+
+        return children_header_root[children_table_index]
+
+
+    children = []
+
+    children_table = get_children_table()
+
+    if not children_table:
+        return children
+
+    first = True
+    for table_row in children_table.find("tr"):
+        if first:
+            # Skip first without enumerating
+            first = False
+            continue
+
+        table_cells = list(table_row.find("td"))
+        children.append(Child(
+            url=f"{BASE_URL}/{table_cells[0].text().strip()}",
+            direct_children=int(table_cells[2].text().strip()),
+            subnodes_total=int(table_cells[3].text().strip())
+        ))
+
+    return children
+
+
 def main():
     ehp_parser = ehp.Html()
 
-    # enterprise_file_contents = None
-    # with open(ENTERPRISE_FILE_PATH, "rt") as enterprise_file:
-    #     enterprise_file_contents = enterprise_file.read()
-
-    # then = time.perf_counter()
-    # root = ehp_parser.feed(enterprise_file_contents)
-
-    test_page_contents = None
-    with open("test_page.html", "rt") as test_page_file:
-        test_page_contents = test_page_file.read()
+    # Enterprise File
+    enterprise_file_contents = None
+    with open(ENTERPRISE_FILE_PATH, "rt") as enterprise_file:
+        enterprise_file_contents = enterprise_file.read()
 
     then = time.perf_counter()
-    root = ehp_parser.feed(test_page_contents)
+    root = ehp_parser.feed(enterprise_file_contents)
 
+    # Test Page
+    # test_page_contents = None
+    # with open("test_page.html", "rt") as test_page_file:
+    #     test_page_contents = test_page_file.read()
+
+    # then = time.perf_counter()
+    # root = ehp_parser.feed(test_page_contents)
+
+    # No dl
     # response = requests.get("https://google.com")    
+
+    # then = time.perf_counter()
+    # root = ehp_parser.feed(response.text)
+
+    # No Children With Brothers
+    # response = requests.get("https://oidref.com/1.3.6.1.4.1.24")
 
     # then = time.perf_counter()
     # root = ehp_parser.feed(response.text)
@@ -177,7 +238,14 @@ def main():
     # print(scraped_description_list)
 
     scraped_detailed_data = scrape_detailed_data(root)
-    print(json.dumps(scraped_detailed_data, indent=4))
+    # print(json.dumps(scraped_detailed_data, indent=4))
+
+    children = scrape_children(root)
+    print("\n".join([str(c) for c in children]))
+
+    print()
+
+    print(len(children))
 
     now = time.perf_counter()
 
